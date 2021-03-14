@@ -11,6 +11,8 @@
     display:flex;
     justify-content: center;
     width:30vw;
+}
+.navbar>h2>span{
     color:var(--third);
 }
 .navbar>div{
