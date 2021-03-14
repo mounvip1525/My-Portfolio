@@ -12,22 +12,20 @@ export default class Portfolio extends Component {
     render() {
         return (
             <div>
-                <section>
-                    <Navbar />
-                </section>
-                <section>
+                <Navbar/>
+                <section id="home">
                     <Landing />
                 </section>
-                <section>
+                <section id="education">
                     <Education />
                 </section>
-                <section>
+                <section id="skills">
                     <Skills />
                 </section>
-                <section>
+                <section id="projects">
                     <Projects />
                 </section>
-                <section>
+                <section id="contact">
                     <ContactMe />
                 </section>
             </div>

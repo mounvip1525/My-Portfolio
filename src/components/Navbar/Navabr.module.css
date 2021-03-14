@@ -1,3 +1,36 @@
+.navbar{
+    position:fixed;
+    width:100vw;
+    align-items: center;
+    display:flex;
+    flex-direction: row;
+    height:10vh;
+    background:var(--white);
+}
+.navbar>h2{
+    display:flex;
+    justify-content: center;
+    width:30vw;
+    color:var(--third);
+}
+.navbar>div{
+    width:70vw;
+    display:flex;
+    justify-content: space-around;
+}
+.navbar>div>a{
+    border-bottom:3px solid transparent;
+    text-decoration: none;
+    margin-right:25px;
+    color:var(--primary-color);
+    letter-spacing:2px;
+    z-index:10;
+}
+.navbar>div>a:hover,
+.navbar>div>a:focus{
+    border-bottom:3px solid var(--secondary-color);
+    color:var(--secondary-color);
+}
 .navItems{
     list-style-type: none;
     display:flex;
