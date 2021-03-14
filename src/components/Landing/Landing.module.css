@@ -27,23 +27,25 @@
     max-width:max-content;
     display:block;
     padding: 10px;
-    border-radius: 8px;
+    border-radius: 10px;
     border:none;
     background:var(--third);
     font-size:1.5vw;
     color:var(--white);
+    outline:none;
 }
 .icons{
     display:flex;
     flex-direction: column;
     bottom:0;
-    left:2vh;
+    left:0;
     position:absolute;
     margin:5px;
 }
 .icons>svg{
+    border:1.5px solid var(--secondary-color);
     margin:5px;
-    border-radius:50%;
+    border-radius:2px;
     padding:10%;
     font-size:1.5vw;
     color:var(--secondary-color)

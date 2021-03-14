@@ -5,7 +5,7 @@ export default class Navbar extends Component {
     render() {
         return (
             <nav className={styles.navbar}>
-                <h2>&lt;<span>Mounvi</span> &nbsp; /&gt;</h2>
+                <h2>&lt;<span> &nbsp;Mounvi</span> &nbsp; /&gt;</h2>
                 <div>
                 <a href="#home">HOME</a>
                 <a href="#education">EDUCATION</a>
