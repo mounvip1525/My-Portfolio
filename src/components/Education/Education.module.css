@@ -1,11 +1,13 @@
+.title{
+    margin-bottom:-5% !important;
+}
 .container{
     display:flex;
     justify-content: space-around;
     align-items: center;
     background:var(--whiteTwo);
     height:100vh;
-    box-sizing: border-box;
-    padding:5px;
+    padding:0;
     width:60vw;
     margin:auto;
 }
