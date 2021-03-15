@@ -6,3 +6,9 @@
   --whiteTwo:#fff;
 
 }
+.checked {
+  color: var(--third);
+}
+.fa-star{
+  margin-right:5px;
+}
