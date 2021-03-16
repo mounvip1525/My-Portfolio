@@ -1,4 +1,4 @@
-.container{
+/* .container{
     display:flex;
     flex-direction:row;
     flex-wrap:wrap;
@@ -6,15 +6,14 @@
     margin:auto;
     align-items: center;
     text-align: center;
-    /* background:var(--primary-color); */
     border-radius:10px;
     justify-content: center;
 }
-.container>div>img{
+.sliderComponents>div>img{
     height:12vh;
     width:12vw;
 }
-.container>div{
+.sliderComponents>div{
     background:var(--white);
     width:25%;
     margin:2%;
@@ -23,7 +22,7 @@
     border-radius:10px;
     box-shadow: 3px 3px 2px var(--secondary-color);
 }
-.container>div>h5{
+.sliderComponents>div>h5{
     margin:0;
     padding:5px;
     background:var(--third);
@@ -31,8 +30,39 @@
     margin:auto;
     border-radius:5px;
 }
-.container>div>p{
+.sliderComponents>div>p{
     color:var(--secondary-color);
     font-size:1rem;
     margin-bottom:2px;
+} */
+.sliderComponent>img{
+    width:50vh;
+    max-height:20vh;
+    /* align-items: center;
+     */
+     text-align: left;
+}
+.sliderComponent{
+    display:flex;
+    justify-content: center;
+    background:green;
+    margin:2%;
+}
+.slick-slide {
+    padding: 10px;
+  }
+.sliderc{
+    background:red;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    /* text-align: center; */
+}
+.sliderc>div{
+    padding:2% !important;
+    margin:2% !important;
+    margin-left:10%;
+    /* display:flex !important; */
+    align-items: center !important;
+    /* justify-content: center !important; */
 }

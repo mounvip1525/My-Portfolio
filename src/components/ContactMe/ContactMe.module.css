@@ -23,11 +23,11 @@
     display:flex;
     justify-content: center;
     align-items: center;
-    background:var(--primary-color);
+    background:var(--white);
     padding:10px;
     border-radius: 10px;
     margin-top:3%;
-    box-shadow: 1px 1px 2px var(--third);
+    box-shadow: 0px 2px 10px var(--third);
 }
 .left{
     /* background:var(--third); */
