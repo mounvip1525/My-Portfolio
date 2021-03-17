@@ -6,6 +6,7 @@
     flex-direction: row;
     height:10vh;
     background:var(--white);
+    z-index:1000;
 }
 .navbar>h2{
     display:flex;

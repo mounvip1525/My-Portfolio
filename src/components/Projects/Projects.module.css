@@ -47,3 +47,26 @@
     color:white;
     border-radius:5px;
 }
+.ongoing{
+    width:100%;
+    text-align: center;
+    font-size:1.2vw;
+    color:var(--secondary-color)
+}
+.buttonContainer{
+    margin-top:-1%;
+    width:100%;
+    display:flex;
+    justify-content: center;
+}
+.loadmore{
+    width:15%;
+    height:8vh;
+    text-align: center;
+    background:var(--third);
+    border:none;
+    color:white;
+    border-radius:10px;
+    font-size:2vw;
+    outline:none;
+}

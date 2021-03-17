@@ -25,7 +25,7 @@ import navigation from '../../assests/navigation.png';
 
 export default class Projects extends Component {
     state={
-        names:[1,2,3,4,5,6,7,8,9],
+        loadAll:false,
         projects:[
             {
                 id:1,
@@ -34,97 +34,97 @@ export default class Projects extends Component {
                 link:"https://mounvip1525.github.io/Quote-Generator/",
             },
             {
-                id:6,
+                id:2,
                 pic:photopedia,
                 name:"Infinity Gallery",
                 link:"https://mounvip1525.github.io/Infinity-gallery/",
             },
             {
-                id:7,
+                id:3,
                 pic:countdown,
                 name:"Custom Countdown",
                 link:"https://mounvip1525.github.io/Custom-Countdown/",
             },
             {
-                id:8,
+                id:4,
                 pic:joketeller,
                 name:"Joke Teller",
                 link:"https://mounvip1525.github.io/Joke-Teller/",
             },
             {
-                id:9,
+                id:5,
                 pic:spockrock,
                 name:"RockPaperScissors+",
                 link:"https://mounvip1525.github.io/Spock-Rock-Game/",
             },
             {
-                id:16,
+                id:6,
                 pic:ecommerce,
                 name:"E-commerce site",
-                link:"",
+                link:"https://e-commerce-mounvi.herokuapp.com/",
             },
             {
-                id:17,
+                id:7,
                 pic:gclone,
-                name:"Google Forms clone-ongoing",
+                name:"Google Forms clone~(ongoing)",
                 link:"",
             },
             {
-                id:2,
+                id:8,
                 pic:pong,
                 name:"Pong Game",
                 link:"https://mounvip1525.github.io/Pong/",
             },
             {
-                id:11,
+                id:9,
                 pic:musicplayer,
                 name:"Music Player",
                 link:"https://mounvip1525.github.io/Music-Player/",
             },
             {
-                id:12,
+                id:10,
                 pic:kanbanboard,
                 name:"Kanban Board",
                 link:"https://mounvip1525.github.io/Kanban-board/",
             },
             {
-                id:13,
+                id:11,
                 pic:sprintmaths,
                 name:"Sprint Maths",
                 link:"https://mounvip1525.github.io/Kanban-board/",
             },
             {
-                id:14,
+                id:12,
                 pic:bookmarks,
                 name:"My Bookmarker",
                 link:"https://mounvip1525.github.io/Bookmarker-Links/",
             },
             {
-                id:15,
+                id:13,
                 pic:picinpic,
                 name:"Play in background",
                 link:"https://mounvip1525.github.io/PictureInPicture/",
             },
             {
-                id:3,
+                id:14,
                 pic:videoplayer,
                 name:"Video Player",
                 link:"https://mounvip1525.github.io/Video-Player/",
             },
             {
-                id:4,
+                id:15,
                 pic:paint,
                 name:"MS Paint clone",
                 link:"https://mounvip1525.github.io/Paint-Clone/",
             },
             {
-                id:5,
+                id:16,
                 pic:taskmate,
                 name:"Taskmate-Django app",
                 link:"https://taskmateplus.herokuapp.com/task/",
             },
             {
-                id:10,
+                id:17,
                 pic:calculator,
                 name:"Calculator",
                 link:"https://mounvip1525.github.io/My-Calculator/",
@@ -138,22 +138,28 @@ export default class Projects extends Component {
 
         ]
     }
+    loadAll(){
+
+    }
     render() {
         return (
             <React.Fragment>
-                <Title name="My Projects" />
+                <Title name="My Frontend Projects" />
                 <div className={styles.container}>
                     {this.state.projects.map(project=>{
                     return(
+                        project.id<=9 ?
                         <div className={styles.project}>
                             <img src={project.pic} alt="My project" />
                             <div className={styles.projectName}>
                                 <p>{project.name}</p>
                                 <div title="Launch Live"><a href={project.link}><LaunchIcon /></a></div>
                             </div>
-                        </div>
+                        </div> : null
                     )
                 })}
+                <div className={styles.buttonContainer}><button className={styles.loadmore}>Load More</button></div>
+                <p className={styles.ongoing}>Python projects will be added shortly</p>
             </div>
             </React.Fragment>
         )
