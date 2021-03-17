@@ -18,12 +18,13 @@
     border-radius:5%;
     height:100%;
     object-fit: cover;
+    border:1px solid var(--primary-color);
 }
 .projectName{
     display:flex;
     justify-content: space-between;
     position:absolute;
-    bottom:0px;
+    bottom:-1px;
     background:var(--white);
     width:100%;
     border-bottom-left-radius: 15px;
@@ -39,7 +40,7 @@
 .projectName>p{
     font-weight:500;
 }
-.projectName>div>svg{
+.projectName>div>a>svg{
     background:var(--third);
     padding:5px;
     margin-top:5px;

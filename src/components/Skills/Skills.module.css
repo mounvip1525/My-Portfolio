@@ -58,3 +58,6 @@
     text-align: center;
     outline:none;
 }
+.buttonContainer>button:hover{
+    background:#8d9ff5
+}
