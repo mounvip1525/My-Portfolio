@@ -17,7 +17,7 @@ import SendIcon from '@material-ui/icons/Send';
 export default class ContactMe extends React.Component  {
     constructor(props){
         super(props);
-        this.state = {name: "", email: "", phone: "", message: ""};
+        this.state = {name: "",category: "", email: "", phone: "", message: ""};
       }
       handleForm = e => {
         axios.post(
@@ -84,14 +84,14 @@ export default class ContactMe extends React.Component  {
                         <p>It'd be great if you can tell why you are reaching out to me!</p>
                             <div className={styles.query}>
                                 <div>
-                                    <label for='c1'><input type="radio" name='c' id='c1'/>Feedback</label>
+                                    <label for='c1'><input type="radio" name='category' id='c1' value="Feedback" onChange={this.handleFields}/>Feedback</label>
                                 </div>
                                 <div>
-                                    <label for='c2'> <input type="radio" name='c' id='c2'/>Queries</label>
+                                    <label for='c2'> <input type="radio" name='category' id='c2' value="Queries" onChange={this.handleFields}/>Queries</label>
                                 </div><div>
-                                    <label for='c3'><input type="radio" name='c' id='c3'/>Hiring Purposes</label>
+                                    <label for='c3'><input type="radio" name='category' id='c3' value="Hiring Purposes" onChange={this.handleFields}/>Hiring Purposes</label>
                                 </div><div>
-                                    <label for='c4'><input type="radio" name='c' id='c3'/>Others</label>
+                                    <label for='c4'><input type="radio" name='category' id='c3' value="Others" onChange={this.handleFields}/>Others</label>
                                 </div>
                             </div>
                         <button type="submit" className={styles.send}>Send<SendIcon /></button>
