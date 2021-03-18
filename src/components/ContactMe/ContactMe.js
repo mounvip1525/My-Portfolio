@@ -1,6 +1,7 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import styles from './ContactMe.module.css';
 import Title from '../Title/Title';
+import axios from "axios";
 
 import CallIcon from '@material-ui/icons/Call';
 import EmailIcon from '@material-ui/icons/Email';
@@ -12,8 +13,30 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import SendIcon from '@material-ui/icons/Send';
-export default class ContactMe extends Component {
-    render() {
+
+export default class ContactMe extends React.Component  {
+    constructor(props){
+        super(props);
+        this.state = {name: "", email: "", phone: "", message: ""};
+      }
+      handleForm = e => {
+        axios.post(
+          "https://formcarry.com/s/y3uiZmryu1", 
+          this.state, 
+          {headers: {"Accept": "application/json"}}
+          )
+          .then(function (response) {
+            console.log(response.data.title);
+          })
+          .catch(function (error) {
+            console.log(error);
+          });
+    
+        e.preventDefault();
+      }
+    
+      handleFields = e => this.setState({ [e.target.name]: e.target.value });
+    render(){
         return (
             <React.Fragment>
                 <div className={styles.wrapper}>
@@ -37,25 +60,25 @@ export default class ContactMe extends Component {
                         <a href="https://twitter.com/PodapatiMounvi"><TwitterIcon /></a>
                         </div>
                     </div>
-                    <div className={styles.right}>
+                    <form onSubmit={this.handleForm} className={styles.right}>
                         <div className={styles.rightContainer}>
                             <div>
                                 <div>
                                     <label for='fname'>Your Name</label>
-                                    <input type="text" name='name' placeholder='John Doe' />
+                                    <input type="text" name='name' id="name" placeholder='John Doe' onChange={this.handleFields} required/>
                                 </div>
                                 <div>
                                     <label for='email'>Email Address</label>
-                                    <input type="email" name='email' placeholder='example@gmail.com' />
+                                    <input type="email" name='email'id="email" placeholder='example@gmail.com' onChange={this.handleFields} required/>
                                 </div>
                                 <div>
                                     <label for='phone'>Phone Number</label>
-                                    <input type="phone" name='phone' placeholder='+91 XXXXXXXXXX' />
+                                    <input type="phone" name='phone'id="phone" placeholder='+91 XXXXXXXXXX' onChange={this.handleFields} required/>
                                 </div>
                             </div>
                             <div className={styles.message}>
                                 <label for='message'><p>Message</p></label>
-                                <textarea type="text" name='message' placeholder='Your message' />
+                                <textarea type="text" name='message' placeholder='Your message' id="message" onChange={this.handleFields} required/>
                             </div>
                         </div>
                         <p>It'd be great if you can tell why you are reaching out to me!</p>
@@ -71,11 +94,12 @@ export default class ContactMe extends Component {
                                     <label for='c4'><input type="radio" name='c' id='c3'/>Others</label>
                                 </div>
                             </div>
-                        <button className={styles.send}>Send<SendIcon /></button>
-                    </div>
+                        <button type="submit" className={styles.send}>Send<SendIcon /></button>
+                    </form>
                 </div>
                 </div>
             </React.Fragment>
-        )
-    }
+    )
+        }
 }
+

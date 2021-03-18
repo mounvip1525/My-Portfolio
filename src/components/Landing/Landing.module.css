@@ -48,27 +48,17 @@
 }
 .icons>a>svg{
     /* border:1.5px solid var(--secondary-color); */
-    margin:5px;
+    margin:3px;
     border-radius:2px;
     padding:10%;
     font-size:1.5vw;
     color:var(--secondary-color);
-    cursor:pointer;
+    border:1.5px solid transparent;
+    border-radius:5px;
 }
-.icons>a>svg:nth-child(1):hover{
-    color:dodgerblue;
-}
-.icons>a>svg:nth-child(3):hover{
-    color: #0e76a8;
-}
-.icons>a>svg:nth-child(2):hover{
-    color: #a0294c;
-}
-.icons>a>svg:nth-child(4):hover{
-    color:black;
-}
-.icons>a>svg:nth-child(5):hover{
-    color:dodgerblue;
+.icons>a>svg:hover{
+    border:1.5px solid var(--third);
+    color:var(--third);
 }
 .gmail{
     writing-mode: vertical-lr;
