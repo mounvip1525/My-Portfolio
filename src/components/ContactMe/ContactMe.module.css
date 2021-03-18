@@ -88,6 +88,7 @@
     border-radius: 50%;
     padding:2%;
     transition:all 0.2s ease-in ;
+    cursor:pointer;
 }
 .socialIcons>svg:hover{
     background:var(--third);
@@ -222,7 +223,7 @@ input[type="radio"] {
     height: 1.2em;
     padding: 1px;
     background-clip: content-box;
-    border: 1px solid #bbbbbb;
+    border: 1px solid var(--primary-color);
     border-radius: 50%;
   }
 input[type="radio"]:checked{
