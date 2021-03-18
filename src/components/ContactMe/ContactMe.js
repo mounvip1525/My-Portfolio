@@ -81,7 +81,7 @@ export default class ContactMe extends React.Component  {
                                 <textarea type="text" name='message' placeholder='Your message' id="message" onChange={this.handleFields} required/>
                             </div>
                         </div>
-                        <p>It'd be great if you can tell why you are reaching out to me!</p>
+                        <p className={styles.q}>It'd be great if you can tell why you are reaching out to me!</p>
                             <div className={styles.query}>
                                 <div>
                                     <label for='c1'><input type="radio" name='category' id='c1' value="Feedback" onChange={this.handleFields}/>Feedback</label>
