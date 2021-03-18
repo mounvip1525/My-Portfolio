@@ -79,3 +79,29 @@
 .displayNone{
     display:none;
 }
+@media screen and (max-width:950px){
+    .project{
+        height:auto;
+    }
+}
+@media screen and (max-width:650px){
+    .project{
+        width:40%;
+    }
+    .projectName>p{
+        font-size:2vw;
+    }
+    .projectName>div>a>svg{
+        font-size:2vw;
+        margin-top:5px;
+    }
+    .projectName{
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+}
+@media screen and (max-width:400px){
+    .project{
+        width:50%;
+    }
+}
