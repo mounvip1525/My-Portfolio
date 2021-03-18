@@ -7,6 +7,9 @@ import TwitterIcon from '@material-ui/icons/Twitter';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import GitHubIcon from '@material-ui/icons/GitHub';
+import PermContactCalendarIcon from '@material-ui/icons/PermContactCalendar';
+import GetAppIcon from '@material-ui/icons/GetApp';
+
 import Resume from '../../Resume.pdf';
 
 export default class Landing extends Component {
@@ -18,8 +21,8 @@ export default class Landing extends Component {
                    <h1>MOUNVI PODAPATI</h1>
                    <p>and I do Front-end development mostly</p>
                    <div className={styles.buttonContainer}>
-                        <button><a href={Resume} download>Resume</a></button>
-                        <button>< a href="#contact">Contact Me</a></button>
+                        <button><a href={Resume} download><GetAppIcon />Resume</a></button>
+                        <button>< a href="#contact"><PermContactCalendarIcon />Contact Me</a></button>
                    </div>
                    <div className={styles.icons}>
                         <a href="https://www.facebook.com/mounvi.podapati/"><FacebookIcon /></a>

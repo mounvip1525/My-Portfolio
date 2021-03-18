@@ -34,12 +34,6 @@ export default function Projects() {
     }
     const [projects1,setProjects1]=useState([
             {
-                id:1,
-                pic:quoteGnerator,
-                name:"Quote Generator",
-                link:"https://mounvip1525.github.io/Quote-Generator/",
-            },
-            {
                 id:2,
                 pic:photopedia,
                 name:"Infinity Gallery",
@@ -50,12 +44,6 @@ export default function Projects() {
                 pic:countdown,
                 name:"Custom Countdown",
                 link:"https://mounvip1525.github.io/Custom-Countdown/",
-            },
-            {
-                id:4,
-                pic:joketeller,
-                name:"Joke Teller",
-                link:"https://mounvip1525.github.io/Joke-Teller/",
             },
             {
                 id:5,
@@ -76,16 +64,28 @@ export default function Projects() {
                 link:"",
             },
             {
-                id:8,
-                pic:pong,
-                name:"Pong Game",
-                link:"https://mounvip1525.github.io/Pong/",
-            },
-            {
                 id:9,
                 pic:musicplayer,
                 name:"Music Player",
                 link:"https://mounvip1525.github.io/Music-Player/",
+            },
+            {
+                id:1,
+                pic:quoteGnerator,
+                name:"Quote Generator",
+                link:"https://mounvip1525.github.io/Quote-Generator/",
+            },
+            {
+                id:11,
+                pic:sprintmaths,
+                name:"Sprint Maths",
+                link:"https://mounvip1525.github.io/Kanban-board/",
+            },
+            {
+                id:8,
+                pic:pong,
+                name:"Pong Game",
+                link:"https://mounvip1525.github.io/Pong/",
             },
     ])
     const [projects2,setProjects2]=useState([
@@ -96,16 +96,22 @@ export default function Projects() {
             link:"https://mounvip1525.github.io/Kanban-board/",
         },
         {
-            id:11,
-            pic:sprintmaths,
-            name:"Sprint Maths",
-            link:"https://mounvip1525.github.io/Kanban-board/",
-        },
-        {
             id:12,
             pic:bookmarks,
             name:"My Bookmarker",
             link:"https://mounvip1525.github.io/Bookmarker-Links/",
+        },
+        {
+            id:4,
+            pic:joketeller,
+            name:"Joke Teller",
+            link:"https://mounvip1525.github.io/Joke-Teller/",
+        },
+        {
+            id:15,
+            pic:paint,
+            name:"MS Paint clone",
+            link:"https://mounvip1525.github.io/Paint-Clone/",
         },
         {
             id:13,
@@ -118,12 +124,6 @@ export default function Projects() {
             pic:videoplayer,
             name:"Video Player",
             link:"https://mounvip1525.github.io/Video-Player/",
-        },
-        {
-            id:15,
-            pic:paint,
-            name:"MS Paint clone",
-            link:"https://mounvip1525.github.io/Paint-Clone/",
         },
         {
             id:16,

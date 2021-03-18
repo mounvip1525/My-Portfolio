@@ -1,8 +1,10 @@
 .container{
     display:flex;
     flex-wrap:wrap;
-    width:90%;
+    width:85%;
+    padding:1%;
     margin:auto;
+    background:-webkit-linear-gradient(180deg,var(--primary-color) 20%, var(--third) 20%, #7f97ec 80%,var(--primary-color) 80%);
 }
 .project{
     flex:1;
@@ -50,7 +52,7 @@
     width:100%;
     text-align: center;
     font-size:1.2vw;
-    color:var(--secondary-color)
+    color:var(--primary-color)
 }
 .buttonContainer{
     margin-top:-5%;
@@ -66,9 +68,9 @@
     width:15%;
     height:8vh;
     text-align: center;
-    background:var(--third);
+    background:var(--primary-color);
     border:none;
-    color:white;
+    color:var(--third);
     border-radius:10px;
     font-size:2vw;
     outline:none;

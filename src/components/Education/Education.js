@@ -7,7 +7,7 @@ import Title from '../Title/Title';
 export default class Education extends Component {
     render() {
         return (
-            <div>
+            <div className={styles.wrapper}>
                <div className={styles.title}>
                <Title name="My Education" />
                </div>

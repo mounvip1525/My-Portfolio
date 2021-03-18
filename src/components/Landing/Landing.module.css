@@ -18,7 +18,7 @@
 }
 .buttonContainer{
     display:flex;
-    width:70%;
+    width:80%;
     justify-content: space-between;
     margin-top:5vh;
 }
@@ -37,6 +37,10 @@
 .buttonContainer>button>a{
     text-decoration:none;
     color:var(--white)
+}
+.buttonContainer>button>a>svg{
+    vertical-align: bottom;
+    margin-right:2px;
 }
 .icons{
     display:flex;

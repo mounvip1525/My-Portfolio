@@ -19,7 +19,7 @@ import Stars from '../Stars/Stars';
 export default class Skills extends Component {
     render() {
         return (
-            <div>
+            <div className={styles.wrapper}>
               <Title name="My Skillsets" />
               <div className={styles.container}>
               <CarouselProvider
