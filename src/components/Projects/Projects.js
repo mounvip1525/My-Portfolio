@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { useState } from 'react';
 import styles from './Projects.module.css';
 import LaunchIcon from '@material-ui/icons/Launch';
 import pic from '../../assests/project1.png';
@@ -23,10 +24,15 @@ import ecommerce from '../../assests/ecommerce.png';
 import gclone from '../../assests/fabforms.png';
 import navigation from '../../assests/navigation.png';
 
-export default class Projects extends Component {
-    state={
-        loadAll:false,
-        projects:[
+export default function Projects() {
+    const [showClass,setShowClass]=useState(styles.displayNone);
+    const [showAll,setShowAll]=useState(false);
+    function setShowAllf(){
+        setShowAll(!showAll);
+        setShowClass(styles.project);
+        // console.log(showClass);
+    }
+    const [projects1,setProjects1]=useState([
             {
                 id:1,
                 pic:quoteGnerator,
@@ -81,87 +87,96 @@ export default class Projects extends Component {
                 name:"Music Player",
                 link:"https://mounvip1525.github.io/Music-Player/",
             },
-            {
-                id:10,
-                pic:kanbanboard,
-                name:"Kanban Board",
-                link:"https://mounvip1525.github.io/Kanban-board/",
-            },
-            {
-                id:11,
-                pic:sprintmaths,
-                name:"Sprint Maths",
-                link:"https://mounvip1525.github.io/Kanban-board/",
-            },
-            {
-                id:12,
-                pic:bookmarks,
-                name:"My Bookmarker",
-                link:"https://mounvip1525.github.io/Bookmarker-Links/",
-            },
-            {
-                id:13,
-                pic:picinpic,
-                name:"Play in background",
-                link:"https://mounvip1525.github.io/PictureInPicture/",
-            },
-            {
-                id:14,
-                pic:videoplayer,
-                name:"Video Player",
-                link:"https://mounvip1525.github.io/Video-Player/",
-            },
-            {
-                id:15,
-                pic:paint,
-                name:"MS Paint clone",
-                link:"https://mounvip1525.github.io/Paint-Clone/",
-            },
-            {
-                id:16,
-                pic:taskmate,
-                name:"Taskmate-Django app",
-                link:"https://taskmateplus.herokuapp.com/task/",
-            },
-            {
-                id:17,
-                pic:calculator,
-                name:"Calculator",
-                link:"https://mounvip1525.github.io/My-Calculator/",
-            },
-            {
-                id:18,
-                pic:navigation,
-                name:"Animated Navigation",
-                link:"https://mounvip1525.github.io/Animated-Navigation/"
-            },
-
-        ]
-    }
-    loadAll(){
-
-    }
-    render() {
-        return (
-            <React.Fragment>
-                <Title name="My Frontend Projects" />
-                <div className={styles.container}>
-                    {this.state.projects.map(project=>{
-                    return(
-                        project.id<=9 ?
-                        <div className={styles.project}>
-                            <img src={project.pic} alt="My project" />
-                            <div className={styles.projectName}>
-                                <p>{project.name}</p>
-                                <div title="Launch Live"><a href={project.link}><LaunchIcon /></a></div>
-                            </div>
-                        </div> : null
-                    )
-                })}
-                <div className={styles.buttonContainer}><button className={styles.loadmore}>Load More</button></div>
-                <p className={styles.ongoing}>Python projects will be added shortly</p>
-            </div>
-            </React.Fragment>
-        )
-    }
+    ])
+    const [projects2,setProjects2]=useState([
+        {
+            id:10,
+            pic:kanbanboard,
+            name:"Kanban Board",
+            link:"https://mounvip1525.github.io/Kanban-board/",
+        },
+        {
+            id:11,
+            pic:sprintmaths,
+            name:"Sprint Maths",
+            link:"https://mounvip1525.github.io/Kanban-board/",
+        },
+        {
+            id:12,
+            pic:bookmarks,
+            name:"My Bookmarker",
+            link:"https://mounvip1525.github.io/Bookmarker-Links/",
+        },
+        {
+            id:13,
+            pic:picinpic,
+            name:"Play in background",
+            link:"https://mounvip1525.github.io/PictureInPicture/",
+        },
+        {
+            id:14,
+            pic:videoplayer,
+            name:"Video Player",
+            link:"https://mounvip1525.github.io/Video-Player/",
+        },
+        {
+            id:15,
+            pic:paint,
+            name:"MS Paint clone",
+            link:"https://mounvip1525.github.io/Paint-Clone/",
+        },
+        {
+            id:16,
+            pic:taskmate,
+            name:"Taskmate-Django app",
+            link:"https://taskmateplus.herokuapp.com/task/",
+        },
+        {
+            id:17,
+            pic:calculator,
+            name:"Calculator",
+            link:"https://mounvip1525.github.io/My-Calculator/",
+        },
+        {
+            id:18,
+            pic:navigation,
+            name:"Animated Navigation",
+            link:"https://mounvip1525.github.io/Animated-Navigation/"
+        },
+    ])
+    return (
+        <React.Fragment>
+            <Title name="My Frontend Projects" />
+            <div className={styles.container}>
+                {projects1.map(project=>{
+                return(
+                    <div className={styles.project}>
+                        <img src={project.pic} alt="My project" />
+                        <div className={styles.projectName}>
+                            <p>{project.name}</p>
+                            <div title="Launch Live"><a href={project.link}><LaunchIcon /></a></div>
+                        </div>
+                    </div>
+                )
+            })}
+            {projects2.map(project=>{
+                return(
+                    <div className={showClass}>
+                        <img src={project.pic} alt="My project" />
+                        <div className={styles.projectName}>
+                            <p>{project.name}</p>
+                        <div title="Launch Live"><a href={project.link}><LaunchIcon /></a></div>
+                        </div>
+                    </div>
+                )
+            })}
+            {!showAll ? 
+                        <div className={styles.buttonContainer}>
+                        <button onClick={()=>setShowAllf()}
+                        className={styles.loadmore}>Load More</button>
+                    </div> : null }
+            <p className={styles.ongoing}>Python projects will be added shortly</p>
+        </div>
+        </React.Fragment>
+    )
 }

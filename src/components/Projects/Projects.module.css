@@ -6,7 +6,6 @@
 }
 .project{
     flex:1;
-    /* padding:2%; */
     margin:2%;
     display:flex;
     flex-direction: column;
@@ -43,7 +42,7 @@
 .projectName>div>a>svg{
     background:var(--third);
     padding:5px;
-    margin-top:5px;
+    margin-top:10px;
     color:white;
     border-radius:5px;
 }
@@ -54,10 +53,14 @@
     color:var(--secondary-color)
 }
 .buttonContainer{
-    margin-top:-1%;
+    margin-top:-5%;
     width:100%;
     display:flex;
     justify-content: center;
+    /* background:green; */
+    z-index:10;
+    padding:2%;
+    /* backdrop-filter: blur(3px); */
 }
 .loadmore{
     width:15%;
@@ -69,4 +72,8 @@
     border-radius:10px;
     font-size:2vw;
     outline:none;
+    z-index:20;
+}
+.displayNone{
+    display:none;
 }
