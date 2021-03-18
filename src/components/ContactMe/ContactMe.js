@@ -30,11 +30,11 @@ export default class ContactMe extends Component {
                             <div><LocationOnIcon /><p>F-1 Creative Royal Appts, AECS Layout</p></div>
                         </div>
                         <div className={styles.socialIcons}>
-                            <FacebookIcon />
-                            <InstagramIcon />
-                            <LinkedInIcon />
-                            <GitHubIcon />
-                            <TwitterIcon />
+                        <a href="https://www.facebook.com/mounvi.podapati/"><FacebookIcon /></a>
+                        <a href="https://www.instagram.com/im_mounvi15/"><InstagramIcon /></a>
+                        <a href="https://www.linkedin.com/in/mounvi-podapati-900a841a0"><LinkedInIcon /></a>
+                        <a href="https://github.com/mounvip1525/"><GitHubIcon /></a>
+                        <a href="https://twitter.com/PodapatiMounvi"><TwitterIcon /></a>
                         </div>
                     </div>
                     <div className={styles.right}>

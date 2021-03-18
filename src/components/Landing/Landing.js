@@ -22,11 +22,11 @@ export default class Landing extends Component {
                         <button>< a href="#contact">Contact Me</a></button>
                    </div>
                    <div className={styles.icons}>
-                        <FacebookIcon />
-                        <InstagramIcon />
-                        <LinkedInIcon />
-                        <GitHubIcon />
-                        <TwitterIcon />
+                        <a href="https://www.facebook.com/mounvi.podapati/"><FacebookIcon /></a>
+                        <a href="https://www.instagram.com/im_mounvi15/"><InstagramIcon /></a>
+                        <a href="https://www.linkedin.com/in/mounvi-podapati-900a841a0"><LinkedInIcon /></a>
+                        <a href="https://github.com/mounvip1525/"><GitHubIcon /></a>
+                        <a href="https://twitter.com/PodapatiMounvi"><TwitterIcon /></a>
                    </div>
                 </div>
                 <div>

@@ -46,7 +46,7 @@
     position:absolute;
     margin:5px;
 }
-.icons>svg{
+.icons>a>svg{
     /* border:1.5px solid var(--secondary-color); */
     margin:5px;
     border-radius:2px;
@@ -55,19 +55,19 @@
     color:var(--secondary-color);
     cursor:pointer;
 }
-.icons>svg:nth-child(1):hover{
+.icons>a>svg:nth-child(1):hover{
     color:dodgerblue;
 }
-.icons>svg:nth-child(3):hover{
+.icons>a>svg:nth-child(3):hover{
     color: #0e76a8;
 }
-.icons>svg:nth-child(2):hover{
+.icons>a>svg:nth-child(2):hover{
     color: #a0294c;
 }
-.icons>svg:nth-child(4):hover{
+.icons>a>svg:nth-child(4):hover{
     color:black;
 }
-.icons>svg:nth-child(5):hover{
+.icons>a>svg:nth-child(5):hover{
     color:dodgerblue;
 }
 .gmail{

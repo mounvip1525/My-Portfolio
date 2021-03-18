@@ -82,15 +82,15 @@
     display: flex;
     justify-content: space-between;
 }
-.socialIcons>svg{
+.socialIcons>a>svg{
     color:var(--third);
     /* margin-top:25%; */
     border-radius: 50%;
-    padding:2%;
+    padding:5px;
     transition:all 0.2s ease-in ;
     cursor:pointer;
 }
-.socialIcons>svg:hover{
+.socialIcons>a>svg:hover{
     background:var(--third);
     color:black;
 }
