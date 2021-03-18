@@ -4,3 +4,8 @@
 section{
     min-height:100vh;
 }
+@media screen and (max-width:900px){
+    section{
+      min-height:70vh !important;
+    }
+  }
