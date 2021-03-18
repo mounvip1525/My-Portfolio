@@ -66,3 +66,65 @@
 .buttonContainer>button:hover{
     background:var(--third)
 }
+.container2{
+    display:none;
+    flex-direction:row;
+    flex-wrap:wrap;
+    width:75%;
+    margin:auto;
+    align-items: center;
+    text-align: center;
+    /* background:var(--primary-color); */
+    border-radius:10px;
+    justify-content: center;
+}
+.container2>div>img{
+    height:10vh;
+    width:10vw;
+}
+.container2>div{
+    background:var(--white);
+    width:25%;
+    margin:2%;
+    min-height:30vh;
+    padding:1%;
+    border-radius:10px;
+    box-shadow: 3px 3px 2px var(--secondary-color);
+}
+.container2>div>h5{
+    margin:0;
+    padding:5px;
+    background:var(--third);
+    width:50%;
+    margin:auto;
+    border-radius:5px;
+}
+.container2>div>p{
+    color:var(--secondary-color);
+    font-size:1.5vw;
+    margin-bottom:2px;
+}
+@media screen and (max-width: 950px) {
+    .container2{
+        display:flex;
+    }
+    .container{
+        display:none;
+    }
+ }
+ @media screen and (max-width:800px){
+     .container2>div{
+         width:40%;
+         height:10vh !important;
+     }
+ }
+ @media screen and (max-width:600px){
+     .container2>div{
+         width:80%;
+         min-height:25vh;
+     }
+     .container2>div>p{
+         font-size:2.5vw;
+     }
+ }
+
