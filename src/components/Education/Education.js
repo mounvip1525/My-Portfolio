@@ -20,7 +20,7 @@ export default class Education extends Component {
                         <p>Mozilla Firefox</p>
                         <p>Apple Developers Group</p>
                         <h5>My Hobbies</h5>
-                        <p>I paint!</p>
+                        <p>I paint and play badminton!</p>
                         <h5>Extra Cirriculars</h5>
                         <p>I'm an athlete</p>
                         <p>I'm a classical dancer</p>
