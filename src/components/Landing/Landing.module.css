@@ -34,6 +34,10 @@
     color:var(--white);
     outline:none;
 }
+.buttonContainer>button>a{
+    text-decoration:none;
+    color:var(--white)
+}
 .icons{
     display:flex;
     flex-direction: column;
