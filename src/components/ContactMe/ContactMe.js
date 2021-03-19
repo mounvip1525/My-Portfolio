@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styles from './ContactMe.module.css';
 import Title from '../Title/Title';
 import axios from "axios";
+import AlertModal from '../AlertModal/AlertModal';
 
 import CallIcon from '@material-ui/icons/Call';
 import EmailIcon from '@material-ui/icons/Email';
@@ -17,7 +18,7 @@ import SendIcon from '@material-ui/icons/Send';
 export default class ContactMe extends React.Component  {
     constructor(props){
         super(props);
-        this.state = {name: "",category: "", email: "", phone: "", message: ""};
+        this.state = {name: "",category: "", email: "", phone: "", message: "",showModal:false,status:false};
       }
       handleForm = e => {
         axios.post(
@@ -26,19 +27,33 @@ export default class ContactMe extends React.Component  {
           {headers: {"Accept": "application/json"}}
           )
           .then(function (response) {
-            console.log(response.data.title);
+            console.log(response);
+            this.setState({status:true})
           })
           .catch(function (error) {
             console.log(error);
           });
     
         e.preventDefault();
+        e.target.reset();
       }
-    
+      showModal1 = () => { 
+        if(this.state.status){
+            this.setState({ showModal : true })
+        } else {
+            alert("Some Error has occured. Please try again")
+        }};
+      hideModal = () => { this.setState({ showModal : false}) }
       handleFields = e => this.setState({ [e.target.name]: e.target.value });
+      isFormValid = () => {
+        const {name, category, email, phone, message} = this.state
+      
+        return name && category && email && phone && message
+      }
     render(){
         return (
             <React.Fragment>
+                <AlertModal show={this.state.showModal} onHide={this.hideModal} />
                 <div className={styles.wrapper}>
                     <Title name="Contact Me" />
                 <div className={styles.container}>
@@ -64,37 +79,37 @@ export default class ContactMe extends React.Component  {
                         <div className={styles.rightContainer}>
                             <div>
                                 <div>
-                                    <label for='fname'>Your Name</label>
+                                    <label htmlFor='fname'>Your Name</label>
                                     <input type="text" name='name' id="name" placeholder='John Doe' onChange={this.handleFields} required/>
                                 </div>
                                 <div>
-                                    <label for='email'>Email Address</label>
+                                    <label htmlFor='email'>Email Address</label>
                                     <input type="email" name='email'id="email" placeholder='example@gmail.com' onChange={this.handleFields} required/>
                                 </div>
                                 <div>
-                                    <label for='phone'>Phone Number</label>
+                                    <label htmlFor='phone'>Phone Number</label>
                                     <input type="phone" name='phone'id="phone" placeholder='+91 XXXXXXXXXX' onChange={this.handleFields} required/>
                                 </div>
                             </div>
                             <div className={styles.message}>
-                                <label for='message'><p>Message</p></label>
+                                <label htmlFor='message'><p>Message</p></label>
                                 <textarea type="text" name='message' placeholder='Your message' id="message" onChange={this.handleFields} required/>
                             </div>
                         </div>
                         <p className={styles.q}>It'd be great if you can tell why you are reaching out to me!</p>
                             <div className={styles.query}>
                                 <div>
-                                    <label for='c1'><input type="radio" name='category' id='c1' value="Feedback" onChange={this.handleFields}/>Feedback</label>
+                                    <label htmlFor='c1'><input type="radio" name='category' id='c1' value="Feedback" onChange={this.handleFields}/>Feedback</label>
                                 </div>
                                 <div>
-                                    <label for='c2'> <input type="radio" name='category' id='c2' value="Queries" onChange={this.handleFields}/>Queries</label>
+                                    <label htmlFor='c2'> <input type="radio" name='category' id='c2' value="Queries" onChange={this.handleFields}/>Queries</label>
                                 </div><div>
-                                    <label for='c3'><input type="radio" name='category' id='c3' value="Hiring Purposes" onChange={this.handleFields}/>Hiring Purposes</label>
+                                    <label htmlFor='c3'><input type="radio" name='category' id='c3' value="Hiring Purposes" onChange={this.handleFields}/>Hiring Purposes</label>
                                 </div><div>
-                                    <label for='c4'><input type="radio" name='category' id='c3' value="Others" onChange={this.handleFields}/>Others</label>
+                                    <label htmlFor='c4'><input type="radio" name='category' id='c3' value="Others" onChange={this.handleFields}/>Others</label>
                                 </div>
                             </div>
-                        <button type="submit" className={styles.send}>Send<SendIcon /></button>
+                        <button type="submit" onClick={()=>this.showModal1()} className={styles.send} disabled={!this.isFormValid}>Send<SendIcon /></button>
                     </form>
                 </div>
                 </div>
@@ -102,4 +117,3 @@ export default class ContactMe extends React.Component  {
     )
         }
 }
-

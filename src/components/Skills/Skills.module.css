@@ -18,9 +18,9 @@
     justify-content: center !important;
 }
 .slideComponent>img{
-    height:50%;
-    width:50%;
-    object-fit:contain;
+    height:40%;
+    width:40%;
+    /* object-fit:contain; */
 }
 .slideComponent{
     background:var(--white);
@@ -33,11 +33,11 @@
     box-shadow: 3px 3px 2px var(--secondary-color);
 }
 .slideComponent>h5{
-    margin:0;
     padding:5px;
     background:var(--third);
     width:50%;
     margin:auto;
+    margin-top:5%;
     border-radius:5px;
 }
 .slideComponent>p{

@@ -74,7 +74,7 @@
     height:5vh;
     object-fit: contain;
     margin-right:4%;
-    margin-top:-2%;
+    margin-top:2%;
 }
 .modalButtonContainer>button{
     background:var(--third);
@@ -108,7 +108,7 @@
     }
     .modalTechStack>img{
         width:5vw;
-        margin-top:-5%;
+        /* margin-top:-5%; */
     }
 
 }
