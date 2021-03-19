@@ -1,10 +1,12 @@
 import React from "react";
 import "./Modal.css";
-import pic from '../../assests/ecommerce.png';
+
 import html from '../../assests/html.svg';
 import javascript from '../../assests/js.svg';
+import css from '../../assests/css.svg';
 import react from '../../assests/react.svg';
 import nodejs from '../../assests/node-js.svg';
+import python from '../../assests/python.svg';
 import CloseIcon from '@material-ui/icons/Close';
 
 const Modal = (props) => {
@@ -21,11 +23,13 @@ const Modal = (props) => {
             <div className="modalDetails">
                 <h4>{props.name}</h4>
                 <p>{props.description}</p>
-                <h4>Languages used</h4>
                 <div className="modalTechStack">
-                    <img src={html} alt="HTML" />
-                    <img src={javascript} alt="Javascript" />
-                    <img src={react} alt="React" />
+                  {props.techStack.includes("html") ? <img src={html} alt="HTML" /> : null }
+                  {props.techStack.includes("css") ? <img src={css} alt="CSS" /> : null }
+                  {props.techStack.includes("javascript") ? <img src={javascript} alt="JAVASCRIPT" /> : null }
+                  {props.techStack.includes("react") ? <img src={react} alt="REACT" /> : null }
+                  {props.techStack.includes("nodejs") ? <img src={nodejs} alt="NODEJS" /> : null }
+                  {props.techStack.includes("django") ? <img src={python} alt="DJANGO" /> : null }
                 </div>
                 <div className="modalButtonContainer">
                     <button><a href={props.link}>Live Demo</a></button>
