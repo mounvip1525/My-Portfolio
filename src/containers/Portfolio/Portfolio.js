@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import styles from './Portfolio.module.css';
 
 import Navbar from '../../components/Navbar/Navbar';
 import Landing from '../../components/Landing/Landing';
@@ -7,6 +6,7 @@ import Education from '../../components/Education/Education';
 import Skills from '../../components/Skills/Skills';
 import Projects from '../../components/Projects/Projects';
 import ContactMe from '../../components/ContactMe/ContactMe';
+import Footer from '../../components/Footer/Footer';
 
 export default class Portfolio extends Component {
     render() {
@@ -28,6 +28,7 @@ export default class Portfolio extends Component {
                 <section id="contact">
                     <ContactMe />
                 </section>
+                <Footer />
             </div>
         )
     }
