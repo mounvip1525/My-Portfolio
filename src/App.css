@@ -4,7 +4,15 @@
   --third:#6D83F2;
   --white:#f1f3f8;
   --whiteTwo:#fff;
+  /* --primary-color:#6d83f2;
+  --secondary-color:#3e4047;
+  --third:#dbe0ff;
+  --white:#000000;
+  --whiteTwo:rgb(0, 0, 0); */
 
+}
+body{
+  overflow-x: hidden;
 }
 .checked {
   color: var(--third);
@@ -32,4 +40,5 @@
 }
 button{
   cursor:pointer;
+  outline:none;
 }

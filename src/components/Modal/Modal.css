@@ -1,0 +1,85 @@
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width:100%;
+    height: 100%;
+    background: rgba(199, 212, 255, 0.75);
+    /* position:absolute; */
+    z-index:30;
+} 
+.modal-main {
+    z-index:25;
+    position:fixed;
+    background: var(--whiteTwo);
+    width: 40%;
+    height: auto;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    border-radius: 5px;
+    padding:1%;
+    box-sizing: border-box;
+    margin:auto;
+    display:flex;
+    margin-top:2%;
+} 
+.display-block {
+    display: block;
+} 
+.display-none {
+    display: none;
+}
+.modalContainer{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.modalClose{
+    width:100%;
+}
+.modalContainer>div>svg{
+    float:right;
+}
+.modalImage>img{
+    height:40vh;
+    width:30vw;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.modalDetails{
+    display:flex;
+    flex-direction: column;
+    padding:2%;
+}
+.modalDetails>h4{
+    margin:0;
+    padding:0;
+    text-transform: uppercase;
+}
+.modalDetails>p{
+    color:var(--secondary-color);
+    text-align: justify;
+    margin:0;
+    padding:0;
+}
+.modalTechStack>img{
+    width:5vh;
+    height:5vh;
+    object-fit: contain;
+    margin-right:4%;
+    margin-top:2%;
+}
+.modalButtonContainer>button{
+    background:var(--third);
+    border:none;
+    padding:2%;
+    margin-right:3%;
+    margin-top:5%;
+    border-radius: 5px;
+}
+.modalButtonContainer>button>a{
+    text-decoration: none;
+    color:var(--primary-color);
+}
