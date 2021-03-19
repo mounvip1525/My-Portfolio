@@ -74,7 +74,7 @@
     height:5vh;
     object-fit: contain;
     margin-right:4%;
-    margin-top:2%;
+    margin-top:-2%;
 }
 .modalButtonContainer>button{
     background:var(--third);
@@ -87,4 +87,28 @@
 .modalButtonContainer>button>a{
     text-decoration: none;
     color:var(--primary-color);
+}
+@media screen and (max-width:1000px){
+    .modal-main{
+        width:60vw;
+    }
+    .modalImage>img{
+        width:80%;
+    }
+    .modalDetails>p{
+        font-size:2vw;
+    }
+}
+@media screen and (max-width:500px){
+    .modalImage>img{
+        height:30vh;
+    }
+    .modalDetails>p{
+        font-size:2.5vw;
+    }
+    .modalTechStack>img{
+        width:5vw;
+        margin-top:-5%;
+    }
+
 }
