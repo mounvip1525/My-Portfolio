@@ -1,18 +1,33 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './Footer.module.css';
 import Feedback from '../Feedback/Feedback';
+import FeedbackIcon from '@material-ui/icons/Feedback';
 
-export default function Footer() {
+export default class Footer extends React.Component  {
+    constructor(props){
+        super(props);
+        this.state={
+            showModal:false
+        }
+        this.showModal1=this.showModal1.bind(this);
+      }
+      showModal1 = () => { console.log("hi");this.setState({ showModal : true })};
+      hideModal = () => { console.log("bye");this.setState({ showModal : false}) }
+      render(){
     return (
         <div>
-            <Feedback />
+            <Feedback show={this.state.showModal} onHide={this.hideModal}/>
+            <div className={styles.fbIcon}>
+                <button onClick={()=>this.showModal1()}><FeedbackIcon ></FeedbackIcon></button>
+            </div>
             <div className={styles.container}>
-                <p>&lt; div languageUsed=&#123; ReactJS &#125; </p>
-                <p>deployedOn=&#123; Heroku &#125; </p>
-                <p>formSubmissionTo=&#123; Formcarry &#125;</p>
-                <p>carouselLibrary=&#123; react-pure-carousel &#125;</p>
-                <p>madeWith=&#123; Love &#125; /&gt; </p>
+                <p>&lt; div languageUsed=&#123; <span>ReactJS</span> &#125; </p>
+                <p>deployedOn=&#123; <span>Heroku</span> &#125; </p>
+                <p>formSubmissionTo=&#123; <span>Formcarry</span> &#125;</p>
+                <p>carouselLibrary=&#123; <span>react-pure-carousel</span> &#125;</p>
+                <p>madeWith=&#123; <span>Love</span> &#125; /&gt; </p>
         </div>
         </div>
     )
+}
 }

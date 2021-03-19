@@ -1,3 +1,17 @@
+.fbIcon{
+    width:100%;
+}
+.fbIcon>button{
+    float:right;
+    position:absolute;
+    right:2%;
+    margin-top:-5%;
+    background:var(--third);
+    border:none;
+    padding:0.5%;
+    border-radius: 5px;
+    color:var(--primary-color);
+}
 .container{
     display:flex;
     min-height:10vh;
@@ -10,6 +24,9 @@
 .container>p{
     font-size:1.3vw;
     color:var(--third);
+}
+.container>p>span{
+    color:var(--secondary-color)
 }
 @media screen and (max-width:900px){
     .container>p{
