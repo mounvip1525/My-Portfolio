@@ -23,7 +23,7 @@ export default class ContactMe extends React.Component  {
       handleForm = e => {
         axios.post(
           "https://formcarry.com/s/y3uiZmryu1", 
-          this.state, 
+          this.state.name,this.state.category,this.state.email,this.state.phone,this.state.message, 
           {headers: {"Accept": "application/json"}}
           )
           .then(function (response) {

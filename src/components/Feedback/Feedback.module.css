@@ -21,20 +21,23 @@
     padding-bottom: 0;
     color:var(--third);
   }
-  .fb>p{
+  .fb>input{
     margin:2%;
     padding:5px;
     background:var(--primary-color);
     width:max-content;
     border-radius: 5px;
     color:var(--third);
+    border:none;
+    width:70%;
+    text-align: center;
   }
   .slider{
     width:70% !important;
     margin-top:2%;
     margin-bottom:-5%;
   }
-  .fbContainer>button{
+  .buttonContainer{
     float:right;
     color:var(--third);
     border:none;
@@ -42,3 +45,43 @@
     padding:5px;
     border-radius:5px;
   }
+  .buttonContainer>button{
+    float:right;
+    color:var(--primary-color);
+    border:none;
+    background: var(--third);
+    margin:0;
+    padding:5px;
+    border-radius:5px;
+  }
+  .submitContainer{
+    width:100%;
+    padding:2%;
+  }
+  .submit{
+    color:var(--primary-color);
+    border:none;
+    background: var(--third);
+    padding:3%;
+    border-radius:5px;
+    margin-left:auto;
+    margin-right:2%;
+    margin-top:-2%;
+  }
+
+@media screen and (max-width:785px){
+  .fb>h4{
+    font-size:2vw;
+  }
+  .fb>input{
+    font-size:1.5vw;
+  }
+  .submit{
+    font-size:2vw;
+  }
+}
+@media screen and (max-width:400px){
+  .feedback{
+    visibility:hidden
+  }
+}
