@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styles from './Footer.module.css';
 import Feedback from '../Feedback/Feedback';
 import FeedbackIcon from '@material-ui/icons/Feedback';
+import Slider from '@material-ui/core/Slider';
 
 export default class Footer extends React.Component  {
     constructor(props){
@@ -16,10 +17,15 @@ export default class Footer extends React.Component  {
       render(){
     return (
         <div>
-            <Feedback show={this.state.showModal} onHide={this.hideModal}/>
+            {/* <Feedback show={this.state.showModal} onHide={this.hideModal}/>
+            <div className={styles.fb}>
+                <h4>How would you rate this portfolio ? </h4>
+                <p>Very Nice</p>
+                <Slider defaultValue={0} step={1} marks min={0} max={5} />
+            </div>
             <div className={styles.fbIcon}>
                 <button onClick={()=>this.showModal1()}><FeedbackIcon ></FeedbackIcon></button>
-            </div>
+            </div> */}
             <div className={styles.container}>
                 <p>&lt; div languageUsed=&#123; <span>ReactJS</span> &#125; </p>
                 <p>deployedOn=&#123; <span>Heroku</span> &#125; </p>

@@ -1,0 +1,44 @@
+.feedback{
+    position:fixed;
+    bottom:11%;
+    right:0.5%;
+    /* width:20vw; */
+    background:var(--primary-color);
+    border:2px solid var(--white);
+    border-radius: 2px;
+  }
+  .fb{
+    margin-left:auto;
+    padding:5%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    background:var(--whiteTwo);
+    /* display:none; */
+  }
+  .fb>h4{
+    margin-bottom: 5px;
+    padding-bottom: 0;
+    color:var(--third);
+  }
+  .fb>p{
+    margin:2%;
+    padding:5px;
+    background:var(--primary-color);
+    width:max-content;
+    border-radius: 5px;
+    color:var(--third);
+  }
+  .slider{
+    width:70% !important;
+    margin-top:2%;
+    margin-bottom:-5%;
+  }
+  .fbContainer>button{
+    float:right;
+    color:var(--third);
+    border:none;
+    background: var(--primary-color);
+    padding:5px;
+    border-radius:5px;
+  }

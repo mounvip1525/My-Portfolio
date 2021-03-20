@@ -1,19 +1,35 @@
-import React from 'react';
+import React, { useState } from 'react';
+import styles from './Feedback.module.css';
 import Slider from '@material-ui/core/Slider';
-import CloseIcon from '@material-ui/icons/Close';
-import './Feedback.css';
+import FeedbackIcon from '@material-ui/icons/Feedback';
 
 export default function Feedback(props) {
-    const modalClass = props.show ? "modal3 display-block3" : "modal3 display-none3";
+    const [val, setVal] = useState([0]); 
+    const [label,setLabel] = useState("Bad");
+    const [width,setWidth] = useState("0vw");
+    const [display,setDisplay] = useState("None");
+    let showFeedback = () =>{
+        setWidth("20vw");
+        setDisplay("flex");
+        console.log(width,display)
+    }
+    const updateRange = (e, data) => { 
+      console.log(data[0]);
+      let temp= data[0] === 1 ? setLabel("Very Bad") : 
+                          data[0] === 2 ? setLabel("Nothing Special") :
+                          data[0] === 3  ? setLabel("Okayish") :
+                          data[0] === 4  ? setLabel("It's good") : setLabel("Amazing!");
+      setVal(data); 
+    }; 
     return (
-        <div className={modalClass}>
-        <div className="modal-main3">
-            <div className="feedbackModal">
-                <div><CloseIcon onClick={props.onHide}/></div>
-                <h5>How would you rate this portfolio ? </h5>
-                <p>Very appreciable if you can select one</p>
-                <Slider defaultValue={0} step={1} marks min={0} max={5} />
+        <div className={styles.feedback} style={{width}}>
+        <div className={styles.fbContainer}>
+            <div className={styles.fb} style={{display}}>
+                <h4>Rate this portfolio </h4>
+                <p>{label}</p>
+                <Slider value={val} onChange={updateRange} marks min={1} max={5} className={styles.slider}/>
             </div>
+            <button><FeedbackIcon onClick = {()=>showFeedback()}/></button>
         </div>
     </div>
     )

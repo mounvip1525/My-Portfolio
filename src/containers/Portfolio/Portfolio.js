@@ -1,4 +1,6 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
+import styles from './Portfolio.module.css';
+import Slider from '@material-ui/core/Slider';
 
 import Navbar from '../../components/Navbar/Navbar';
 import Landing from '../../components/Landing/Landing';
@@ -7,9 +9,9 @@ import Skills from '../../components/Skills/Skills';
 import Projects from '../../components/Projects/Projects';
 import ContactMe from '../../components/ContactMe/ContactMe';
 import Footer from '../../components/Footer/Footer';
+import Feedback from '../../components/Feedback/Feedback';
 
-export default class Portfolio extends Component {
-    render() {
+export default function Portfolio()  {
         return (
             <div>
                 <Navbar/>
@@ -28,8 +30,8 @@ export default class Portfolio extends Component {
                 <section id="contact">
                     <ContactMe />
                 </section>
+                <Feedback />
                 <Footer />
             </div>
         )
-    }
 }
