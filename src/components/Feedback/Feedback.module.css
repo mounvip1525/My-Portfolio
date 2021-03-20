@@ -16,7 +16,7 @@
     background:var(--whiteTwo);
     /* display:none; */
   }
-  .fb>h4{
+  .fb>label>h4{
     margin-bottom: 5px;
     padding-bottom: 0;
     color:var(--third);
@@ -68,9 +68,29 @@
     margin-right:2%;
     margin-top:-2%;
   }
+.thanks{
+  display:flex;
+  justify-content: space-between;
+  width:100%;
+}
+.thanks>p{
+  margin:0;
+  padding:0;
+  color:var(--third);
+  font-weight:600;
+  margin-top:-3%;
+}
+.thanks>svg{
+  background:var(--third);
+  color:var(--primary-color);
+  margin-right:5%;
+  margin-top:-3%;
+  padding:1%;
+  cursor:pointer;
+}
 
 @media screen and (max-width:785px){
-  .fb>h4{
+  .fb>label>h4{
     font-size:2vw;
   }
   .fb>input{
@@ -78,6 +98,13 @@
   }
   .submit{
     font-size:2vw;
+  }
+  .thanks>p{
+    font-size:2vw;
+  }
+  .thanks>svg{
+    font-size:2.5vw;
+    margin-top:-5%
   }
 }
 @media screen and (max-width:400px){

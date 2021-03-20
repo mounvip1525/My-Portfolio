@@ -11,32 +11,19 @@ export default function Feedback(props) {
     const [display,setDisplay] = useState("None");
     const [show,setShow] = useState(false);
     const [value,setValue]=useState("");
+    const [displayButton,setDisplayButton] = useState("None");
     let showFeedback = () =>{
         setShow(!show);
         if(show){
             setWidth("0vw");
             setDisplay("None");
+            setDisplayButton("None");
         } else {
             setWidth("20vw");
             setDisplay("flex");
+            setDisplayButton("flex");
         }
     }
-    const handleForm = (e) => {
-        // console.log(label);
-        axios.post(
-          "https://formcarry.com/s/G2xEx2rJ7i", 
-            label,
-          {headers: {"Accept": "application/json"}}
-          )
-          .then(function (response) {
-            console.log(response);
-          })
-          .catch(function (error) {
-            console.log(error);
-          });
-    
-        e.preventDefault();
-      }
     const updateRange = (e, data) => { 
       let temp= data[0] === 1 ? setLabel("Very Bad ;-;") : 
                           data[0] === 2 ? setLabel("Nothing Special :( ") :
@@ -44,14 +31,43 @@ export default function Feedback(props) {
                           data[0] === 4  ? setLabel("It's good ;)") : setLabel("Amazing!");
       setVal(data); 
     };
-    let handleFields = e => setValue(e.target.value); 
+    const [serverState, setServerState] = useState({
+      submitting: false,
+      status: null
+    });
+    const handleServerResponse = (ok, msg, form) => {
+      setServerState({
+        submitting: false,
+        status: { ok, msg }
+      });
+      if (ok) {
+        form.reset();
+      }
+    };
+    const handleOnSubmit = e => {
+      e.preventDefault();
+      const form = e.target;
+      setServerState({ submitting: true });
+      axios({
+        method: "post",
+        url: "https://formspree.io/f/mjvpnqpp",
+        data: new FormData(form)
+      })
+        .then(r => {
+          handleServerResponse(true, "Thanks!", form);
+          setDisplayButton("flex");
+        })
+        .catch(r => {
+          handleServerResponse(false, r.response.data.error, form);
+        });
+    };
     return (
         <div className={styles.feedback} style={{width}}>
-            <form onSubmit={handleForm} method="POST" className={styles.fbContainer}>
+            <form onSubmit={handleOnSubmit} method="POST" className={styles.fbContainer}>
                 <div className={styles.fbContainer}>
                 <div className={styles.fb} style={{display}}>
-                    <h4>Rate this portfolio </h4>
-                    <input required type="text" id="name" name="name" onChange={handleFields} value={label} required/>
+                    <label htmlFor="feedback"><h4>Rate this portfolio </h4></label>
+                    <input type="text" id="feedback" name="feedback" value={label} required/>
                     <Slider value={val} onChange={updateRange} marks min={1} max={5} className={styles.slider}/>
                 </div>
                 <div className={styles.buttonContainer} onClick = {()=>showFeedback()}>
@@ -59,7 +75,14 @@ export default function Feedback(props) {
                     <FeedbackIcon/> }
                 </div>
                 <div className={styles.submitContainer} style={{display}}>
-                <button className={styles.submit} type="submit" onClick={()=>showFeedback()}>Submit</button>
+                  {serverState.status ?  
+                      <div className={styles.thanks}>
+                          <p className={!serverState.status.ok ? "errorMsg" : ""}>
+                          {serverState.status.msg}
+                        </p> <FeedbackIcon onClick={()=>showFeedback()}/>
+                      </div>
+                        : <button className={styles.submit} type="submit" onClick={()=>showFeedback()}>Submit</button>
+                  }
                 </div>
             </div>
             </form>

@@ -45,11 +45,6 @@ export default class ContactMe extends React.Component  {
         }};
       hideModal = () => { this.setState({ showModal : false}) }
       handleFields = e => this.setState({ [e.target.name]: e.target.value });
-      isFormValid = () => {
-        const {name, category, email, phone, message} = this.state
-      
-        return name && category && email && phone && message
-      }
     render(){
         return (
             <React.Fragment>
@@ -109,7 +104,7 @@ export default class ContactMe extends React.Component  {
                                     <label htmlFor='c4'><input type="radio" name='category' id='c3' value="Others" onChange={this.handleFields}/>Others</label>
                                 </div>
                             </div>
-                        <button type="submit" onClick={()=>this.showModal1()} className={styles.send} disabled={!this.isFormValid}>Send<SendIcon /></button>
+                        <button type="submit" onClick={()=>this.showModal1()} className={styles.send}>Send<SendIcon /></button>
                     </form>
                 </div>
                 </div>

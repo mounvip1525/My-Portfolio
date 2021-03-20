@@ -239,6 +239,9 @@ input[type="radio"]:focus{
     .right{
         width:100%;
     }
+    .rightContainer>div{
+        width:90%
+    }
     .left>div>h2{
         font-size:5vw;
         text-align: center;
@@ -268,14 +271,25 @@ input[type="radio"]:focus{
         padding:0;
     }
     .q{
-        font-size:2.8vw;
+        font-size:4vw;
     }
     .send>svg{
         display:none;
+    }
+    .query>div{
+        font-size: 2.5vw;
+    }
+    input[type="radio"]{
+        height:1em;
+        width:1em;
     }
 }
 @media screen and (max-width:400px){
     .rightContainer{
         flex-direction: column;
+    }
+    input[type="radio"]{
+        height:0.75em;
+        width:0.75em;
     }
 }
