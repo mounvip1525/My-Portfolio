@@ -35,7 +35,7 @@ export default function Projects() {
     const [showModal,setShowModal]=useState(false);
     
     let hideModal = () => { setShowModal(false) }
-    const [projects1,setProjects1]=useState([
+    const projects1=[
             {
                 id:1,
                 pic:photopedia,
@@ -116,8 +116,8 @@ export default function Projects() {
                 sourceCode:"https://github.com/mounvip1525/Pong",
                 description:"Traditional Pong game developed to understand the concepts of Canvas. Two player feature will be added soon!"
             },
-    ])
-    const [projects2,setProjects2]=useState([
+    ];
+    const projects2=[
         {
             id:10,
             pic:kanbanboard,
@@ -199,7 +199,7 @@ export default function Projects() {
             sourceCode:"https://github.com/mounvip1525/Animated-Navigation",
             description:"An application developed to understand the concepts of CSS transitions and effects, custom navbar created"
         },
-    ])
+    ];
     const [description,setDesription]=useState("");
     const [name,setName]=useState("");
     const [img,setImg]=useState("");
@@ -217,7 +217,7 @@ export default function Projects() {
     return (
         <div className={styles.wrapper}>
             <Title name="My Frontend Projects" />
-            <Modal show={true} show={showModal} onHide={hideModal} name={name} description={description} img={img} link={launch} code={sourceCode} techStack={techStack}/>
+            <Modal show={showModal} onHide={hideModal} name={name} description={description} img={img} link={launch} code={sourceCode} techStack={techStack}/>
             <div className={styles.container}>
                 {projects1.map((project)=>{
                 return(

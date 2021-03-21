@@ -1,8 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styles from './Footer.module.css';
-import Feedback from '../Feedback/Feedback';
-import FeedbackIcon from '@material-ui/icons/Feedback';
-import Slider from '@material-ui/core/Slider';
 
 export default class Footer extends React.Component  {
     constructor(props){

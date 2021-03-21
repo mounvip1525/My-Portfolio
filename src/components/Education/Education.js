@@ -14,7 +14,7 @@ export default class Education extends Component {
                 <div className={styles.container}>
                 <div className={styles.userCard}>
                     <p>My Education Section</p>
-                    <img src={pic} />
+                    <img src={pic} alt="img"/>
                     <div className={styles.hobbies}>
                         <h5>College Clubs/Chapters</h5>
                         <p>Mozilla Firefox</p>

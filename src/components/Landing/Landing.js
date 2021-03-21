@@ -34,7 +34,7 @@ export default class Landing extends Component {
                 </div>
                 <div>
                     <p className={styles.gmail}>mounvip1525@gmail.com</p>
-                    <img src={pic}></img>
+                    <img src={pic} alt="img"></img>
                 </div>
             </div>
         )

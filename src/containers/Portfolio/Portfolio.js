@@ -1,6 +1,4 @@
-import React, { useState } from 'react';
-import styles from './Portfolio.module.css';
-import Slider from '@material-ui/core/Slider';
+import React from 'react';
 
 import Navbar from '../../components/Navbar/Navbar';
 import Landing from '../../components/Landing/Landing';

@@ -10,7 +10,6 @@ export default function Feedback(props) {
     const [width,setWidth] = useState("0vw");
     const [display,setDisplay] = useState("None");
     const [show,setShow] = useState(false);
-    const [value,setValue]=useState("");
     const [displayButton,setDisplayButton] = useState("None");
     let showFeedback = () =>{
         setShow(!show);
@@ -25,10 +24,10 @@ export default function Feedback(props) {
         }
     }
     const updateRange = (e, data) => { 
-      let temp= data[0] === 1 ? setLabel("Very Bad ;-;") : 
-                          data[0] === 2 ? setLabel("Nothing Special :( ") :
-                          data[0] === 3  ? setLabel("Okayish -_-") :
-                          data[0] === 4  ? setLabel("It's good ;)") : setLabel("Amazing!");
+      data[0] === 1 ? setLabel("Very Bad ;-;") : 
+                  data[0] === 2 ? setLabel("Nothing Special :( ") :
+                  data[0] === 3  ? setLabel("Okayish -_-") :
+                  data[0] === 4  ? setLabel("It's good ;)") : setLabel("Amazing!");
       setVal(data); 
     };
     const [serverState, setServerState] = useState({
@@ -61,13 +60,16 @@ export default function Feedback(props) {
           handleServerResponse(false, r.response.data.error, form);
         });
     };
+    let valueLabel = () => {
+      
+    }
     return (
         <div className={styles.feedback} style={{width}}>
             <form onSubmit={handleOnSubmit} method="POST" className={styles.fbContainer}>
                 <div className={styles.fbContainer}>
                 <div className={styles.fb} style={{display}}>
                     <label htmlFor="feedback"><h4>Rate this portfolio </h4></label>
-                    <input type="text" id="feedback" name="feedback" value={label} required/>
+                    <input type="text" id="feedback" name="feedback" value={label} required onChange={valueLabel} />
                     <Slider value={val} onChange={updateRange} marks min={1} max={5} className={styles.slider}/>
                 </div>
                 <div className={styles.buttonContainer} onClick = {()=>showFeedback()}>
