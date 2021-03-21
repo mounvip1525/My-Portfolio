@@ -228,6 +228,26 @@ input[type="radio"]:checked{
 input[type="radio"]:focus{
     outline:none;
   }
+.thanks{
+    display:flex;
+    padding:0 3%;
+    float:right;
+    margin-top:2%;
+    background:var(--primary-color);
+    border:none;
+    border-radius: 5px;
+    color:var(--third);
+    outline:none;
+    font-size:1.5vw;
+    user-select: none;
+    cursor:not-allowed;
+}
+.thanks>p{
+    font-size:1.5vw;
+    font-weight:600;
+    padding:2px;
+    margin:2px;
+}
   @media screen and (max-width:950px){
     .container{
         display:flex;
@@ -271,7 +291,7 @@ input[type="radio"]:focus{
         padding:0;
     }
     .q{
-        font-size:4vw;
+        font-size:2.5vw;
     }
     .send>svg{
         display:none;
@@ -291,5 +311,16 @@ input[type="radio"]:focus{
     input[type="radio"]{
         height:0.75em;
         width:0.75em;
+    }
+    .q{
+        font-size:3.5vw;
+    }
+    .query>div{
+        font-size: 3vw;
+    }
+    .thanks>p{
+        font-size:3vw;
+        margin:0;
+        padding:5px;
     }
 }

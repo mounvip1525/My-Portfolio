@@ -1,6 +1,7 @@
 import React from "react";
 import "./AlertModal.css";
 import CloseIcon from '@material-ui/icons/Close';
+import ThumbUpIcon from '@material-ui/icons/ThumbUp';
 
 export default function AlertModal(props){
     const modalClass = props.show ? "modal2 display-block2" : "modal2 display-none2";
@@ -8,10 +9,14 @@ export default function AlertModal(props){
       <div className={modalClass}>
         <div className="modal-main2">
             <div className="alertModal">
-                <div><CloseIcon onClick={props.onHide}/></div>
-                <h3>Succesfull submission</h3>
-                <h4>Thank you for contacting me!</h4>
-                <p>I'll get back to you very soon :)</p>
+                <div className="close"><CloseIcon onClick={props.onHide}/></div>
+                <div className="alertData">
+                    <div className="thumbsup"><ThumbUpIcon /></div>
+                    <div className="data">
+                        <h3>Success!!</h3>
+                        <p>I'll get back to you very soon :&#41;</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
