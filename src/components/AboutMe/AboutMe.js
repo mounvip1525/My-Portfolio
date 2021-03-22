@@ -1,9 +1,11 @@
 import React from 'react';
+import Title from '../Title/Title';
 import styles from './AboutMe.module.css';
 
 export default function AboutMe() {
     return (
         <div className={styles.container}>
+            <Title name="About Me" />
            <div className={styles.row}>
                <div className={styles.column}>
                    <div>I'm basically a front end developer </div>
@@ -13,18 +15,22 @@ export default function AboutMe() {
                         <p>Apple Developers Group</p>
                     </div>
                    <div>I've worked on around <div className={styles.circle}><h2>35+</h2></div>
-                       <p>Front end + Python based projects</p></div>
-               </div>
+                       <p>Front end + Python based projects</p>
+                    </div>
+                    <div>Visitor's count: 
+                        <img className={styles.count} src="https://visitor-badge.glitch.me/badge?page_id=myportfolio-mounvi.netlify.app" />
+                    </div>
+                </div>
                <div className={styles.column}>
+                   <div>I'm currently doing my B.Tech 2nd year at VIT Vellore</div>
                    <div>
-                        <p>import Student from 'VIT-Vellore'&#59;</p>
                         <p>class Bio extends Student &#123;</p>
                         <p>&nbsp;&nbsp;&nbsp;name &#61; 'Mounvi Podapati'&#59;</p>
                         <p>&nbsp;&nbsp;&nbsp;age &#61;  18 &#59;</p>
                         <p>&nbsp;&nbsp;&nbsp;title &#61; '2nd year CSE Undergrad'&#59;</p>
                         <p>&nbsp;&nbsp;&nbsp;pronouns &#61; 'moUnvi'&#59;</p>
                         <p>&nbsp;&nbsp;&nbsp;skills &#61; &#123;</p>    
-                        <p>&nbsp;&nbsp;&nbsp;languages&#61; &#91; 'JavaScript', 'Python' , 'Java'&#93;  &#59;</p>
+                        <p>&nbsp;&nbsp;&nbsp;languages&#61; &#91; 'JavaScript','Python','Java'&#93;&#59;</p>
                         <p>&nbsp;&nbsp;&nbsp;databases&#61; &#91; 'MySQL'&#93; &#59;</p>
                         <p>&nbsp;&nbsp;&nbsp;frameworks&#61; &#91; 'Django', 'Flask'&#93; &#59;</p>
                         &#125;

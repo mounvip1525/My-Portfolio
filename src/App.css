@@ -11,6 +11,9 @@
   --whiteTwo:rgb(0, 0, 0); */
 
 }
+html {
+  scroll-behavior: smooth;
+}
 body{
   overflow-x: hidden;
 }
