@@ -8,6 +8,7 @@ export default class Navbar extends Component {
                 <h2>&lt;<span> &nbsp;Mounvi</span> &nbsp; /&gt;</h2>
                 <div>
                 <a href="#home">HOME</a>
+                <a href="#about">ABOUT ME</a>
                 <a href="#education">EDUCATION</a>
                 <a href="#skills">SKILLS</a>
                 <a href="#projects">PROJECTS</a>

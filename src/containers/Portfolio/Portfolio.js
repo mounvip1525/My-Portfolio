@@ -2,6 +2,7 @@ import React from 'react';
 
 import Navbar from '../../components/Navbar/Navbar';
 import Landing from '../../components/Landing/Landing';
+import AboutMe from '../../components/AboutMe/AboutMe';
 import Education from '../../components/Education/Education';
 import Skills from '../../components/Skills/Skills';
 import Projects from '../../components/Projects/Projects';
@@ -15,6 +16,9 @@ export default function Portfolio()  {
                 <Navbar/>
                 <section id="home">
                     <Landing />
+                </section>
+                <section id="about">
+                    <AboutMe />
                 </section>
                 <section id="education">
                     <Education />
