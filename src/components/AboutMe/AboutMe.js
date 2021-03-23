@@ -45,7 +45,7 @@ export default function AboutMe() {
                     </div>
                     <div><b>My medium article:</b> <a href="https://medium.com/mozilla-firefox-club/backend-through-the-lens-of-a-front-end-developer-68124ae6d4cb"><span>tinyurl.com/MFCVITbackendfrontend</span></a></div>
                    <div>I have recently listened to: 
-                   <img src="https://spotify-now-playing-git-master-mounvip1525.vercel.app/api/spotify-playing" alt="Spotify Now Playing" width="300" className={styles.music} alt="img"/>
+                   <img src="https://spotify-now-playing-git-master-mounvip1525.vercel.app/api/spotify-playing" alt="Spotify Now Playing" width="300" className={styles.music}/>
                    </div>
                 </div>
         </div>

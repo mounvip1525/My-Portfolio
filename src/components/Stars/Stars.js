@@ -8,11 +8,11 @@ export default function Stars(props) {
                 // console.log(index);
                 if(index<i){
                     return(
-                        <span className="fa fa-star checked"></span>
+                        <span key={index} className="fa fa-star checked"></span>
                     )
                 } else {
                     return(
-                        <span className="fa fa-star"></span>
+                        <span key={index} className="fa fa-star"></span>
                     )
                 }
             })

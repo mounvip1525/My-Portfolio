@@ -10,17 +10,17 @@ export default function Feedback(props) {
     const [width,setWidth] = useState("0vw");
     const [display,setDisplay] = useState("None");
     const [show,setShow] = useState(false);
-    const [displayButton,setDisplayButton] = useState("None");
+    // const [displayButton,setDisplayButton] = useState("None");
     let showFeedback = () =>{
         setShow(!show);
         if(show){
             setWidth("0vw");
             setDisplay("None");
-            setDisplayButton("None");
+            // setDisplayButton("None");
         } else {
             setWidth("20vw");
             setDisplay("flex");
-            setDisplayButton("flex");
+            // setDisplayButton("flex");
         }
     }
     const updateRange = (e, data) => { 
@@ -32,7 +32,8 @@ export default function Feedback(props) {
     };
     const [serverState, setServerState] = useState({
       submitting: false,
-      status: null
+      status: null,
+      displayButton:"None"
     });
     const handleServerResponse = (ok, msg, form) => {
       setServerState({
@@ -54,7 +55,7 @@ export default function Feedback(props) {
       })
         .then(r => {
           handleServerResponse(true, "Thanks!", form);
-          setDisplayButton("flex");
+          // setDisplayButton("flex");
         })
         .catch(r => {
           handleServerResponse(false, r.response.data.error, form);

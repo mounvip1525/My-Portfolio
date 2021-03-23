@@ -219,9 +219,9 @@ export default function Projects() {
             <Title name="My Frontend Projects" />
             <Modal show={showModal} onHide={hideModal} name={name} description={description} img={img} link={launch} code={sourceCode} techStack={techStack}/>
             <div className={styles.container}>
-                {projects1.map((project)=>{
+                {projects1.map((project,index)=>{
                 return(
-                    <div className={styles.project} onClick={()=>showModal1(project.name,project.description,project.pic,project.link,project.sourceCode,project.techStack)}>
+                    <div key={index} className={styles.project} onClick={()=>showModal1(project.name,project.description,project.pic,project.link,project.sourceCode,project.techStack)}>
                         <img src={project.pic} alt="My project" />
                         <div className={styles.projectName}>
                             <p>{project.name}</p>
@@ -230,9 +230,9 @@ export default function Projects() {
                     </div>
                 )
             })}
-            {projects2.map(project=>{
+            {projects2.map((project,index)=>{
                 return(
-                    <div className={showClass} onClick={()=>showModal1(project.name,project.description,project.pic,project.link,project.sourceCode,project.techStack)}>
+                    <div key={index} className={showClass} onClick={()=>showModal1(project.name,project.description,project.pic,project.link,project.sourceCode,project.techStack)}>
                         <img src={project.pic} alt="My project" />
                         <div className={styles.projectName}>
                             <p>{project.name}</p>

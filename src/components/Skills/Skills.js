@@ -28,7 +28,6 @@ export default class Skills extends Component {
                 totalSlides={8}
                 isPlaying={true}
                 visibleSlides={4}
-                disableActiveDots={false}
                 interval={3000}>
                 <Slider className={styles.slider}>
                   <Slide index={0}>
