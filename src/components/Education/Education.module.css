@@ -81,6 +81,9 @@
     }
 }
 @media screen and (max-width:700px){
+    .container{
+        margin-top:15%;
+    }
     .hobbies{
         visibility:hidden;
     }
@@ -111,6 +114,7 @@
     }
     .container{
         height:90vh;
+        margin-top:20%;
     }
 }
 @media screen and (max-width:450px){
@@ -125,5 +129,11 @@
     }
     .container{
         height:90vh;
+        margin-top:20%;
+    }
+}
+@media screen and (max-width:350px){
+    .container{
+        margin-top:30%;
     }
 }
