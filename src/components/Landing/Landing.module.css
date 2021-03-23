@@ -114,5 +114,8 @@
     .nameContainer>h1{
         font-size:5vw;
     }
+    .nameContainer>p{
+        font-size:3vw;
+    }
 
 }
