@@ -10,7 +10,7 @@ export default function AboutMe() {
                <div className={styles.column}>
                    <div>I'm basically a <b>Front End Developer</b> </div>
                    <div>Visitor's count: 
-                        <img className={styles.count} src="https://visitor-badge.glitch.me/badge?page_id=myportfolio-mounvi.netlify.app" />
+                        <img className={styles.count} src="https://visitor-badge.glitch.me/badge?page_id=myportfolio-mounvi.netlify.app" alt="img"/>
                     </div>
                    <div>I've worked on around <div className={styles.circle}><h2>35+</h2></div>
                        <p>Front end + Python based projects</p>
@@ -45,7 +45,7 @@ export default function AboutMe() {
                     </div>
                     <div><b>My medium article:</b> <a href="https://medium.com/mozilla-firefox-club/backend-through-the-lens-of-a-front-end-developer-68124ae6d4cb"><span>tinyurl.com/MFCVITbackendfrontend</span></a></div>
                    <div>I have recently listened to: 
-                   <img src="https://spotify-now-playing-git-master-mounvip1525.vercel.app/api/spotify-playing" alt="Spotify Now Playing" width="300" className={styles.music}/>
+                   <img src="https://spotify-now-playing-git-master-mounvip1525.vercel.app/api/spotify-playing" alt="Spotify Now Playing" width="300" className={styles.music} alt="img"/>
                    </div>
                 </div>
         </div>
