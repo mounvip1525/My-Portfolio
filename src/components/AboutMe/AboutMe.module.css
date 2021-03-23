@@ -77,6 +77,15 @@
     vertical-align: middle;
     margin-left:2px;
   }
+  .column>div>a{
+    text-decoration: none;
+    color:var(--third);
+    border-bottom: 2px solid transparent;
+  }
+  .column>div>a:hover{
+    color:var(--secondary-color);
+    border-bottom: 2px solid var(--secondary-color);
+  }
   @media screen and (max-width:740px){
     .container{
       width:100vw;
