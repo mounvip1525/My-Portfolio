@@ -1,18 +1,25 @@
-:root{
+html {
   --primary-color:#dbe0ff;
   --secondary-color:#8d93ab;
   --third:#6D83F2;
   --white:#f1f3f8;
   --whiteTwo:#fff;
-  /* --primary-color:#6d83f2;
-  --secondary-color:#3e4047;
-  --third:#dbe0ff;
-  --white:#000000;
-  --whiteTwo:rgb(0, 0, 0); */
-
-}
-html {
   scroll-behavior: smooth;
+  --blue:rgb(154, 190, 255);
+  --thirdF:#6D83F2;
+  --secondary-colorF:#8d93ab;
+}
+html[data-theme="dark"] {
+    --primary-color:#dbe0ff;
+  --secondary-color:#3e4047;
+  --third:#6D83F2;
+  --white:#000000;
+  --whiteTwo:#191919;
+  scroll-behavior: smooth;
+  background:#191919;
+  --blue:#dbe0ff;
+  --thirdF:#8d93ab;
+  --secondary-colorF:#8593db;
 }
 body{
   overflow-x: hidden;
@@ -44,6 +51,20 @@ body{
 button{
   cursor:pointer;
   outline:none;
+}
+html.theme-transition,
+html.theme-transition *,
+html.theme-transition *:before,
+html.theme-transition *:after {
+  transition: all 750ms !important;
+  transition-delay: 0 !important;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+    background:transparent !important
 }
 @media screen and (max-width:360px){
   body{

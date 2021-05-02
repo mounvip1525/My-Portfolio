@@ -63,7 +63,7 @@
     font-size:1.2vw;
 }
 .details>div>svg{
-    color:#000000;
+    color:var(--third);
     margin:3%;
     /* vertical-align: bottom; */
     margin-top:5%;
@@ -122,11 +122,12 @@
     border-bottom: 1.5px solid var(--primary-color);
     background:none;
     outline:none;
+    margin-left:5px;
 }
 .rightContainer>div>div>input::placeholder{
     /* font-size: 1vw; */
-    padding:2%;
-    color:rgb(154, 190, 255);
+    /* padding:2%; */
+    color:var(--blue);
 }
 .rightContainer>div>div>input:active,
 .rightContainer>div>div>input:focus{
@@ -156,6 +157,7 @@
     background:var(--white);
     resize:none;
     /* padding-left:10px; */
+    color:var(--third)
 }
 .message>textarea::placeholder{
     /* font-size: 1vw; */

@@ -19,6 +19,8 @@ export default function AboutMe() {
                        <p>College Clubs/Chapters that I'm a part of:</p>
                         <p><b>Mozilla Firefox</b></p>
                         <p><b>Apple Developers Group</b></p>
+                        <p><b>Red Ribbon Club</b></p>
+                        <p><b>French Literary Association</b></p>
                     </div>
                 </div>
                <div className={styles.column}>

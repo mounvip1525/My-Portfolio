@@ -32,10 +32,10 @@
 }
 .container>p{
     font-size:1.3vw;
-    color:var(--third);
+    color:var(--thirdF);
 }
 .container>p>span{
-    color:var(--secondary-color)
+    color:var(--secondary-colorF)
 }
 @media screen and (max-width:900px){
     .container>p{

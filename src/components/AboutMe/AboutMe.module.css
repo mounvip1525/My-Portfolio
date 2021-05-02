@@ -49,7 +49,7 @@
   }
   .center{
     background:var(--third) !important;
-    color:var(--white) !important;
+    color:#f1f3f8 !important;
     border:2px solid var(--primary-color)
   }
   .column>div>div{
@@ -75,7 +75,8 @@
   .music{
     background:var(--primary-color);
     vertical-align: middle;
-    margin-left:2px;
+    margin:5%;
+    width:85%;
   }
   .column>div>a{
     text-decoration: none;
