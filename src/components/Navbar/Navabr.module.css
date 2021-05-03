@@ -12,6 +12,7 @@
     display:flex;
     justify-content: center;
     width:30vw;
+    color:var(--black)
 }
 .navbar>h2>span{
     color:var(--third);
@@ -31,8 +32,8 @@
 }
 .navbar>div>a:hover,
 .navbar>div>a:focus{
-    border-bottom:3px solid var(--secondary-color);
-    color:var(--secondary-color);
+    border-bottom:3px solid var(--secondary-colorF);
+    color:var(--secondary-colorF);
 }
 @media screen and (max-width:900px){
     .navbar>h2{

@@ -1,23 +1,3 @@
-
-// function App() {
-//   return (
-//     <React.Fragment>
-//       <Switch>
-//         <Route exact path='/' component={Portfolio} />
-//         <Route path="/Landing" component={Landing} />
-//         <Route path="/Navbar" component={Navbar} />
-//         <Route path="/Education" component={Education} />
-//         <Route path="/Skills" component={Skills} />
-//         <Route path="/Projects" component={Projects} />
-//         <Route path="/Contact" component={ContactMe} />
-//         <Route component={Landing} />
-//       </Switch>
-//     </React.Fragment>
-//   );
-// }
-
-// export default App;
-
 import React, { Component } from 'react';
 import './App.css';
 import { Switch , Route } from 'react-router-dom';
@@ -51,7 +31,7 @@ export default class App extends Component {
   render() {
     return (
     <React.Fragment>
-      <button onClick={e => this.toggleTheme()} className="bts">Switch</button>
+      <button onClick={e => this.toggleTheme()}>Switch</button>
       <Switch>
         <Route exact path='/' component={Portfolio} />
         <Route path="/Landing" component={Landing} />

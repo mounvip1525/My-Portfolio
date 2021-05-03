@@ -8,8 +8,13 @@ html {
   --blue:rgb(154, 190, 255);
   --thirdF:#6D83F2;
   --secondary-colorF:#8d93ab;
+  --primary-colorE:#dbe0ff;
+  --black:#000000;
+  --primary-colorS:#dbe0ff;
+  --whiteS:#f1f3f8;
 }
 html[data-theme="dark"] {
+  --black:#FFFFFF;
     --primary-color:#dbe0ff;
   --secondary-color:#3e4047;
   --third:#6D83F2;
@@ -20,15 +25,19 @@ html[data-theme="dark"] {
   --blue:#dbe0ff;
   --thirdF:#8d93ab;
   --secondary-colorF:#8593db;
+  --primary-colorE:#000000;
+  --primary-colorS:transparent;
+  --whiteS:transparent;
 }
 body{
   overflow-x: hidden;
 }
-.checked {
-  color: var(--third);
-}
 .fa-star{
   margin-right:5px;
+  color:#3e4047;
+}
+.checked {
+  color: var(--third);
 }
 ::-webkit-scrollbar {
   width: 10px;
