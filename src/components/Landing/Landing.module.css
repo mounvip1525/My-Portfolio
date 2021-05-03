@@ -5,16 +5,21 @@
     background:var(--whiteTwo);
     height:100vh;
 }
+/* .nameContainer{
+    margin-left:-10%
+} */
 .nameContainer>p{
     margin:0;
     padding:0;
     font-size:1.5vw;
+    color:var(--black)
 }
 .nameContainer>h1{
     font-weight: 800;
     font-size:3vw;
     margin:0;
     padding:0;
+    color:var(--black)
 }
 .buttonContainer{
     display:flex;
@@ -33,10 +38,14 @@
     font-size:1.5vw;
     color:var(--white);
     outline:none;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
 }
 .buttonContainer>button>a{
     text-decoration:none;
-    color:var(--white)
+    color:#F8F8F8
 }
 .buttonContainer>button>a>svg{
     vertical-align: bottom;
@@ -73,6 +82,12 @@
 .container>div>img{
     height:auto;
     width:40vw;
+}
+.userCard{
+    height:100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
 }
 @media screen and (max-width:900px){
     .buttonContainer>button>a>svg,

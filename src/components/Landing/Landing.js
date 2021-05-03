@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import styles from './Landing.module.css';
 import pic from '../../assests/womencoding.png';
+import pic2 from '../../assests/profile.png';
+import UserCard from '../UserCard/UserCard';
 
 import FacebookIcon from '@material-ui/icons/Facebook';
 import TwitterIcon from '@material-ui/icons/Twitter';
@@ -34,7 +36,10 @@ export default class Landing extends Component {
                 </div>
                 <div>
                     <p className={styles.gmail}>mounvip1525@gmail.com</p>
-                    <img src={pic} alt="img"></img>
+                    {/* <img src={pic} alt="img"></img> */}
+                    <div className={styles.userCard}>
+                    <UserCard />
+                    </div>
                 </div>
             </div>
         )

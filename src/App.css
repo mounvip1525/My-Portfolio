@@ -14,10 +14,13 @@ html {
   --whiteS:#f1f3f8;
   --primary-colorP:#dbe0ff;
   --thirdP:#6D83F2;
+  --primary-colorA:#dbe0ff;
+  --thirdA:#6D83F2;
+  --primary-colorU:#dbe0ff;
 }
 html[data-theme="dark"] {
-  --black:#FFFFFF;
-    --primary-color:#dbe0ff;
+  --black:#F8F8F8;
+  --primary-color:#dbe0ff;
   --secondary-color:#3e4047;
   --third:#6D83F2;
   --white:#000000;
@@ -32,6 +35,9 @@ html[data-theme="dark"] {
   --whiteS:transparent;
   --primary-colorP:black;
   --thirdP:#6D83F2;
+  --primary-colorA:black;
+  --thirdA:#6D83F2;
+  --primary-colorU:black;
 }
 body{
   overflow-x: hidden;

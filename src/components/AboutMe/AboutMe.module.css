@@ -17,7 +17,7 @@
     align-items: center;
     border-radius:10px;
     /* background:var(--third); */
-    background:-webkit-linear-gradient(90deg,var(--primary-color) 50%,var(--third) 50%)
+    background:-webkit-linear-gradient(90deg,var(--primary-colorA) 50%,var(--thirdA) 50%)
   }
   .column {
     flex: 30%;
