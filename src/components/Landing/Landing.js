@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import styles from './Landing.module.css';
-import pic from '../../assests/womencoding.png';
-import pic2 from '../../assests/profile.png';
 import UserCard from '../UserCard/UserCard';
 
 import FacebookIcon from '@material-ui/icons/Facebook';
@@ -15,6 +13,23 @@ import GetAppIcon from '@material-ui/icons/GetApp';
 import Resume from '../../Resume.pdf';
 
 export default class Landing extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            theme: 'light',
+        };
+        this.toggleTheme = this.toggleTheme.bind(this);
+    }
+    toggleTheme = () => {
+      console.log("im clicked");
+      const theme = this.state.theme === "light" ? "dark" : "light";
+      document.documentElement.classList.add("color-theme-in-transition");
+      this.setState({ theme });
+      document.documentElement.setAttribute("data-theme", theme);
+      window.setTimeout(() => {
+        document.documentElement.classList.remove("color-theme-in-transition");
+      }, 1000);
+    }
     render() {
         return (
             <div className={styles.container}>
@@ -35,8 +50,12 @@ export default class Landing extends Component {
                    </div>
                 </div>
                 <div>
+                    <div className="switchC rotate box">
+                    </div>
+                    <button className="switch" onClick={e => this.toggleTheme()}>
+                            {this.state.theme==='light' ? <i class="fa fa-moon"></i> : <i class="fas fa-sun"></i>}
+                        </button>
                     <p className={styles.gmail}>mounvip1525@gmail.com</p>
-                    {/* <img src={pic} alt="img"></img> */}
                     <div className={styles.userCard}>
                     <UserCard />
                     </div>

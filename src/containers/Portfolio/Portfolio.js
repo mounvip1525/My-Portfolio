@@ -10,7 +10,8 @@ import ContactMe from '../../components/ContactMe/ContactMe';
 import Footer from '../../components/Footer/Footer';
 import Feedback from '../../components/Feedback/Feedback';
 
-export default function Portfolio()  {
+export default class Portfolio extends React.Component  {
+    render(){
         return (
             <div>
                 <Navbar/>
@@ -36,4 +37,5 @@ export default function Portfolio()  {
                 <Footer />
             </div>
         )
+    }
 }

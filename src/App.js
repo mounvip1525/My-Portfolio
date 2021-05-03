@@ -11,27 +11,9 @@ import ContactMe from './components/ContactMe/ContactMe';
 import Portfolio from './containers/Portfolio/Portfolio';
 
 export default class App extends Component {
-    constructor(props) {
-      super(props);
-      this.state = {
-          theme: 'light',
-      };
-      this.toggleTheme = this.toggleTheme.bind(this);
-  }
-  toggleTheme = () => {
-    console.log("im clicked");
-    const theme = this.state.theme === "light" ? "dark" : "light";
-    document.documentElement.classList.add("color-theme-in-transition");
-    this.setState({ theme });
-    document.documentElement.setAttribute("data-theme", theme);
-    window.setTimeout(() => {
-      document.documentElement.classList.remove("color-theme-in-transition");
-    }, 1000);
-  }
   render() {
     return (
     <React.Fragment>
-      <button onClick={e => this.toggleTheme()}>Switch</button>
       <Switch>
         <Route exact path='/' component={Portfolio} />
         <Route path="/Landing" component={Landing} />

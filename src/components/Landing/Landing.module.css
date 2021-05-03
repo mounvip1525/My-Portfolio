@@ -102,6 +102,16 @@
     .nameContainer>p{
         font-size:2vw;
     }
+    .container{
+        justify-content: center;
+        flex-direction: column;
+    }
+    .nameContainer{
+        margin-top:50%;
+    }
+    .userCard{
+        margin-top: -20%;
+    }
 }
 @media screen and (max-width:500px){
     .container{

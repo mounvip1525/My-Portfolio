@@ -2,15 +2,11 @@ import React from 'react';
 import pic from '../../assests/profile.png';
 import styles from './UserCard.module.css';
 
-import CallIcon from '@material-ui/icons/Call';
-import EmailIcon from '@material-ui/icons/Email';
 import LocationOnIcon from '@material-ui/icons/LocationOn';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import TwitterIcon from '@material-ui/icons/Twitter';
-import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import GitHubIcon from '@material-ui/icons/GitHub';
-import SendIcon from '@material-ui/icons/Send';
 
 export default function UserCard() {
     return (
@@ -19,17 +15,16 @@ export default function UserCard() {
                 <img src={pic} alt="Mounvi"/>
                 <p><b className={styles.name}>Mounvi Podapati</b></p>
                 <p>Frontend Developer</p>
-            </div>
-            <div className={styles.icons}>
-                <FacebookIcon />
-                <InstagramIcon />
-                <TwitterIcon />
-                <LinkedInIcon />
+                <div><LocationOnIcon />Banaglore, India</div>
             </div>
             <div className={styles.details}>
-                <div><CallIcon />+91 9686662439</div>
-                <div><LocationOnIcon />Banaglore, India</div>
-                <div><EmailIcon />mounvip1525@gmail.com</div>
+                <button><a href="https://www.linkedin.com/in/mounvi-podapati-900a841a0">Connect</a></button>
+            </div>
+            <div className={styles.icons}>
+                <a href="https://www.facebook.com/mounvi.podapati/"><FacebookIcon /></a>
+                <a href="https://www.instagram.com/im_mounvi15/"><InstagramIcon /></a>
+                <a href="https://github.com/mounvip1525/"><GitHubIcon /></a>
+                <a href="https://twitter.com/PodapatiMounvi"><TwitterIcon /></a>
             </div>
         </div>
     )

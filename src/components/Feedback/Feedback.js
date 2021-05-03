@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState,useRef,useEffect } from 'react';
 import styles from './Feedback.module.css';
 import Slider from '@material-ui/core/Slider';
 import FeedbackIcon from '@material-ui/icons/Feedback';
 import axios from 'axios';
 
 export default function Feedback(props) {
+  const node = useRef();
     const [val, setVal] = useState([0]); 
     const [label,setLabel] = useState("Very Bad ;-;");
     const [width,setWidth] = useState("0vw");
@@ -23,6 +24,24 @@ export default function Feedback(props) {
             // setDisplayButton("flex");
         }
     }
+    const handleClick = e => {
+      if (node.current.contains(e.target)) {
+        // inside click
+        return;
+      }
+      // outside click
+      setShow(false);
+      setWidth("0vw");
+            setDisplay("None");
+            // setDisplayButton("None");
+    };
+    useEffect(() => {
+      document.addEventListener("mousedown", handleClick);
+  
+      return () => {
+        document.removeEventListener("mousedown", handleClick);
+      };
+    }, []);
     const updateRange = (e, data) => { 
       data[0] === 1 ? setLabel("Very Bad ;-;") : 
                   data[0] === 2 ? setLabel("Nothing Special :( ") :
@@ -65,7 +84,7 @@ export default function Feedback(props) {
       
     }
     return (
-        <div className={styles.feedback} style={{width}}>
+        <div ref={node} className={styles.feedback} style={{width}}>
             <form onSubmit={handleOnSubmit} method="POST" className={styles.fbContainer}>
                 <div className={styles.fbContainer}>
                 <div className={styles.fb} style={{display}}>
@@ -84,7 +103,7 @@ export default function Feedback(props) {
                           {serverState.status.msg}
                         </p> <FeedbackIcon onClick={()=>showFeedback()}/>
                       </div>
-                        : <button className={styles.submit} type="submit" onClick={()=>showFeedback()}>Submit</button>
+                        : <button className={styles.submit} type="submit" onClick={()=>showFeedback()} style={{display}}>Submit</button>
                   }
                 </div>
             </div>

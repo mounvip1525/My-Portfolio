@@ -17,6 +17,8 @@ html {
   --primary-colorA:#dbe0ff;
   --thirdA:#6D83F2;
   --primary-colorU:#dbe0ff;
+  --whiteF:#fff;
+  --whiteB:#dbe0ff
 }
 html[data-theme="dark"] {
   --black:#F8F8F8;
@@ -38,6 +40,7 @@ html[data-theme="dark"] {
   --primary-colorA:black;
   --thirdA:#6D83F2;
   --primary-colorU:black;
+  --whiteF:black;
 }
 body{
   overflow-x: hidden;
@@ -85,8 +88,104 @@ input:-webkit-autofill:active {
     transition: background-color 5000s ease-in-out 0s;
     background:transparent !important
 }
+.switch,.switchC{
+  position:fixed;
+  left:2%;
+  margin-top:6%;
+  padding:5px 10px;
+  font-size:1.2vw;
+  background:var(--black);
+  border:none;
+  outline:none;
+  padding:10px;
+  z-index:1100;
+}
+.switchC{
+  background:var(--third);
+}
+.box{
+  width:20px;
+  height:20px;
+}
+.switch .fa-moon{
+  color:white;
+}
+.rotate {
+  animation: rotation 7s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+@media screen and (max-width:1000px){
+  .switchC{
+    left:17px;
+  }
+  .switch,.switchC{
+    margin-top:10%;
+  }
+}
+@media screen and (max-width:900px){
+  .switchC{
+    margin-top:58px;
+    left:15px;
+  }
+  .switch,.switchC{
+    margin-top:10%;
+  }
+}
+@media screen and (max-width:800px){
+  .switchC{
+    margin-top:55px;
+    left:17px;
+  }
+  .switch,.switchC{
+    margin-top:12%;
+    font-size:2.5vw;
+  }
+}
+@media screen and (max-width:700px){
+  .switch,.switchC{
+    margin-top:-25%;
+    font-size:2.5vw;
+  }
+  .switch{
+    left:18px;
+  }
+}
+@media screen and (max-width:500px){
+  .switch,.switchC{
+    margin-top:-28%;
+    font-size:2.5vw;
+  }
+}
+@media screen and (max-width:450px){
+  .switch,.switchC{
+    margin-top:-28%;
+    font-size:2.5vw;
+  }
+  .switchC{
+    left:15px;
+  }
+}
+@media screen and (max-width:400px){
+  .switch,.switchC{
+    margin-top:-26%;
+  }
+}
 @media screen and (max-width:360px){
   body{
     overflow-x: scroll;
+  }
+  .switch,.switchC{
+    margin-top:-38%;
+  }
+  .switchC{
+    top:2px;
   }
 }
