@@ -12,6 +12,8 @@ html {
   --black:#000000;
   --primary-colorS:#dbe0ff;
   --whiteS:#f1f3f8;
+  --primary-colorP:#dbe0ff;
+  --thirdP:#6D83F2;
 }
 html[data-theme="dark"] {
   --black:#FFFFFF;
@@ -28,6 +30,8 @@ html[data-theme="dark"] {
   --primary-colorE:#000000;
   --primary-colorS:transparent;
   --whiteS:transparent;
+  --primary-colorP:black;
+  --thirdP:#6D83F2;
 }
 body{
   overflow-x: hidden;

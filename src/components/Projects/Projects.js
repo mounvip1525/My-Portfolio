@@ -4,6 +4,7 @@ import styles from './Projects.module.css';
 import LaunchIcon from '@material-ui/icons/Launch';
 import Title from '../Title/Title';
 import Modal from '../Modal/Modal';
+import DescriptionIcon from '@material-ui/icons/Description';
 
 import quoteGnerator from '../../assests/quote-generator.png';
 import pong from '../../assests/pong.png';
@@ -214,6 +215,10 @@ export default function Projects() {
         setSourceCode(code);
         setTechStack(tech);
         setShowModal(true);}
+    let open = (event,link)=>{
+        window.open(link);
+        event.stopPropagation();
+    }
     return (
         <div className={styles.wrapper}>
             <Title name="My Frontend Projects" />
@@ -225,7 +230,7 @@ export default function Projects() {
                         <img src={project.pic} alt="My project" />
                         <div className={styles.projectName}>
                             <p>{project.name}</p>
-                            <div title="Launch Live"><a href={project.link}><LaunchIcon /></a></div>
+                            <div title="Launch Live" onClick={(e)=>open(e,project.link)}><LaunchIcon /></div>
                         </div>
                     </div>
                 )
@@ -236,7 +241,7 @@ export default function Projects() {
                         <img src={project.pic} alt="My project" />
                         <div className={styles.projectName}>
                             <p>{project.name}</p>
-                        <div title="Launch Live"><a href={project.link}><LaunchIcon /></a></div>
+                        <div title="Launch Live" onClick={(e)=>open(e,project.link)}><LaunchIcon /></div>
                         </div>
                     </div>
                 )
