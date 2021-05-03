@@ -42,6 +42,7 @@
 .close{
     width:100%;
     /* background:green; */
+    color:var(--black);
 }
 .close>svg{
     float:right;

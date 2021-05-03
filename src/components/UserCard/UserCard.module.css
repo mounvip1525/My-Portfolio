@@ -105,13 +105,18 @@
 }
 @media screen and (max-width:650px){
     .profile>p{
-        font-size:1.5vw !important;
+        font-size:1.6vw !important;
     }
     .profile>div{
-        font-size:1.5vw;
+        font-size:1.6vw;
     }
     .profile>img{
         height:18vh;
+    }
+}
+@media screen and (max-width:590px){
+    .profile>img{
+        height:15vh;
     }
 }
 @media screen and (max-width:490px){
@@ -120,9 +125,9 @@
         margin-bottom:4%;
     }
 }
-@media screen and (max-width:460px){
+@media screen and (max-width:470px){
     .profile>img{
-        height:16vh
+        height:14vh
     }
     .name{
         font-size:4vw;
@@ -137,9 +142,9 @@
         font-size:2.5vw;
     }
 }
-@media screen and (max-width:460px){
+@media screen and (max-width:430px){
     .profile>img{
-        height:14vh;
+        height:12vh;
     }
     .details>button{
         margin-bottom:5%;
@@ -148,5 +153,10 @@
 @media screen and (max-width:360px){
     .profile>img{
         height:12vh;
+    }
+}
+@media screen and (max-width:375px){
+    .profile>img{
+        height:11vh;
     }
 }

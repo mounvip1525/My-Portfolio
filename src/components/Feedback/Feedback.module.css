@@ -107,6 +107,11 @@
     margin-top:-5%
   }
 }
+@media screen and (max-width:450px){
+  .fb>label>h4{
+    font-size:1.7vw;
+  }
+}
 @media screen and (max-width:400px){
   .feedback{
     visibility:hidden
