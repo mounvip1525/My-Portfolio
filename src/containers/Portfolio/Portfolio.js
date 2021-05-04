@@ -9,11 +9,13 @@ import Projects from '../../components/Projects/Projects';
 import ContactMe from '../../components/ContactMe/ContactMe';
 import Footer from '../../components/Footer/Footer';
 import Feedback from '../../components/Feedback/Feedback';
+import Overlay from '../../components/Overlay/Overlay';
 
 export default class Portfolio extends React.Component  {
     render(){
         return (
             <div>
+                <Overlay />
                 <Navbar/>
                 <section id="home">
                     <Landing />
