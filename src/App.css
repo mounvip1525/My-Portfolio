@@ -91,7 +91,7 @@ input:-webkit-autofill:active {
 .switch,.switchC{
   position:fixed;
   left:2%;
-  margin-top:6%;
+  margin-top:8%;
   padding:5px 10px;
   font-size:1.2vw;
   background:var(--black);
@@ -122,6 +122,11 @@ input:-webkit-autofill:active {
     transform: rotate(359deg);
   }
 }
+@media screen and (max-width:1068px){
+  .switchC{
+    left:18px;
+  }
+}
 @media screen and (max-width:1000px){
   .switchC{
     left:17px;
@@ -133,20 +138,20 @@ input:-webkit-autofill:active {
 @media screen and (max-width:900px){
   .switchC{
     margin-top:58px;
-    left:15px;
+    left:16px;
   }
   .switch,.switchC{
     margin-top:10%;
+    font-size:1.9vw;
   }
 }
 @media screen and (max-width:800px){
   .switchC{
     margin-top:55px;
-    left:17px;
+    left:15px;
   }
   .switch,.switchC{
     margin-top:12%;
-    font-size:2.5vw;
   }
 }
 @media screen and (max-width:750px){
@@ -160,18 +165,18 @@ input:-webkit-autofill:active {
 }
 @media screen and (max-width:550px){
   .switch,.switchC{
-    margin-top:-18%;
+    margin-top:-20%;
   }
 }
 @media screen and (max-width:500px){
   .switch,.switchC{
-    margin-top:-28%;
+    margin-top:-35%;
     font-size:2.5vw;
   }
 }
 @media screen and (max-width:470px){
   .switch,.switchC{
-    margin-top:-28%;
+    margin-top:-35%;
     font-size:2.5vw;
   }
   .switchC{
@@ -199,9 +204,10 @@ input:-webkit-autofill:active {
     overflow-x: scroll;
   }
   .switch,.switchC{
-    margin-top:-45%;
+    margin-top:-50%;
   }
-  .switchC{
+  /* .switchC{
     top:2px;
-  }
+  } */
+
 }

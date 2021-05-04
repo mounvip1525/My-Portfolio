@@ -105,20 +105,27 @@
     .container{
         justify-content: center;
         flex-direction: column;
+        height:90vh;
     }
     .nameContainer{
-        margin-top:50%;
+        margin-top:45%;
     }
     .userCard{
         margin-top: -20%;
     }
+    .buttonContainer{
+        margin-top:2vh;
+    }
 }
 @media screen and (max-width:550px){
+    .nameContainer{
+        margin-top:60%;
+    }
     .userCard{
-        margin-top:-30%;
+        margin-top:-20%;
     }
     .container{
-        height:80vh
+        height:85vh
     }
     .buttonContainer{
         margin-top:4%;
@@ -129,7 +136,7 @@
         display:flex;
         justify-content: center;
         flex-direction: column;
-        height:100vh;
+        height:95vh;
     }
     .nameContainer{
         width:60vw !important;
@@ -154,9 +161,20 @@
     .nameContainer>p{
         font-size:3vw;
     }
-}
-@media screen and (max-width:400px){
     .userCard{
-        margin-top:-40%;
+        margin-top:-30%;
+    }
+}
+@media screen and (max-width:460px){
+    .nameContainer{
+        margin-top:70%;
+    }
+    .userCard{
+        margin-top:-30%;
+    }
+}
+@media screen and (max-width:430px){
+    .userCard{
+        margin-top:-30%;
     }
 }
