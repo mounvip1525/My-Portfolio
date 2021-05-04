@@ -11,6 +11,8 @@ export default class Overlay extends Component {
       this.setState({ windowWidth: window.innerWidth });
       if(window.innerWidth<=450){
           this.setState({show:true})
+      } else {
+          this.setState({show:false})
       }
      };
     
