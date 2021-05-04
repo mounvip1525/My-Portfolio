@@ -78,14 +78,14 @@ html.theme-transition,
 html.theme-transition *,
 html.theme-transition *:before,
 html.theme-transition *:after {
-  transition: all 750ms !important;
-  transition-delay: 0 !important;
+  transition: all 2s ease!important;
+  transition-delay: 2s !important;
 }
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
-    transition: background-color 5000s ease-in-out 0s;
+    transition: background-color 5000s ease-in-out 2s;
     background:transparent !important
 }
 .switch,.switchC{

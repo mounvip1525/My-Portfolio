@@ -4,7 +4,6 @@ import styles from './Projects.module.css';
 import LaunchIcon from '@material-ui/icons/Launch';
 import Title from '../Title/Title';
 import Modal from '../Modal/Modal';
-import DescriptionIcon from '@material-ui/icons/Description';
 
 import quoteGnerator from '../../assests/quote-generator.png';
 import pong from '../../assests/pong.png';

@@ -21,7 +21,7 @@ export default class Landing extends Component {
         this.toggleTheme = this.toggleTheme.bind(this);
     }
     toggleTheme = () => {
-      console.log("im clicked");
+    //   console.log("im clicked");
       const theme = this.state.theme === "light" ? "dark" : "light";
       document.documentElement.classList.add("color-theme-in-transition");
       this.setState({ theme });
@@ -53,7 +53,7 @@ export default class Landing extends Component {
                     <div className="switchC rotate box">
                     </div>
                     <button className="switch" onClick={e => this.toggleTheme()}>
-                            {this.state.theme==='light' ? <i class="fa fa-moon"></i> : <i class="fas fa-sun"></i>}
+                            {this.state.theme==='light' ? <i className="fa fa-moon"></i> : <i className="fas fa-sun"></i>}
                         </button>
                     <p className={styles.gmail}>mounvip1525@gmail.com</p>
                     <div className={styles.userCard}>
