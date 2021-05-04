@@ -125,6 +125,10 @@
     }
 }
 @media screen and (max-width:490px){
+    .container{
+        width:auto;
+        height:auto;
+    }
     .profile>img{
         height:15vh;
         margin-bottom:4%;

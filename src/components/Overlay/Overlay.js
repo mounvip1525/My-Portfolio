@@ -4,13 +4,13 @@ import "./Overlay.css";
 export default class Overlay extends Component {
     constructor(props) {
         super(props);
-        this.state = { windowWidth: window.innerWidth,show:false };
+        this.state = { windowWidth: window.innerWidth,show:false,count:1 };
       }
     
      handleResize = (e) => {
       this.setState({ windowWidth: window.innerWidth });
-      if(window.innerWidth<=450){
-          this.setState({show:true})
+      if(window.innerWidth<=450 && this.state.count<2){
+          this.setState({show:true,count:this.state.count+1});
       } else {
           this.setState({show:false})
       }
