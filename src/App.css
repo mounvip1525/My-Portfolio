@@ -195,9 +195,6 @@ input:-webkit-autofill:active {
   .switch{
     font-size:2.9vw;
   }
-  .switch,.switchC{
-    margin-top:-50%
-  }
 }
 @media screen and (max-width:420px){
   .switchC{
@@ -207,6 +204,9 @@ input:-webkit-autofill:active {
 @media screen and (max-width:400px){
   .switch{
     font-size:3.3vw;
+  }
+  .switch,.switchC{
+    margin-top:-34%;
   }
 }
 @media screen and (max-width:370px){
