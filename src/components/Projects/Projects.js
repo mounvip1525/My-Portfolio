@@ -23,6 +23,7 @@ import picinpic from '../../assests/screenshare.png';
 import ecommerce from '../../assests/ecommerce.png';
 import gclone from '../../assests/fabforms.png';
 import navigation from '../../assests/navigation.png';
+import messlytix from '../../assests/messlytix.png';
 
 export default function Projects() {
     const [showClass,setShowClass]=useState(styles.displayNone);
@@ -116,6 +117,7 @@ export default function Projects() {
                 sourceCode:"https://github.com/mounvip1525/Pong",
                 description:"Traditional Pong game developed to understand the concepts of Canvas. Two player feature will be added soon!"
             },
+            
     ];
     const projects2=[
         {
@@ -163,8 +165,17 @@ export default function Projects() {
             sourceCode:"https://github.com/mounvip1525/PictureInPicture",
             description:"View any required re-sizeable screen in your desired tab to enable picture in picture ability"
         },
+        // {
+        //     id:15,
+        //     pic:messlytix,
+        //     name:"Messlytix",
+        //     link:"https://messlytix.herokuapp.com/",
+        //     sourceCode:"https://github.com/mounvip1525/Messlytix-DBMS",
+        //     techStack:["html","css","django"],
+        //     description:"Efficient Mess Management System made using Flask, I'd bet you want this system in your college too:)"
+        // },
         {
-            id:15,
+            id:16,
             pic:videoplayer,
             name:"Video Player",
             techStack:["html","css","javascript"],
@@ -173,7 +184,7 @@ export default function Projects() {
             description:"Youtube clone on the way till then this is a simple custom video player!"
         },
         {
-            id:16,
+            id:17,
             pic:taskmate,
             name:"Taskmate-Django app",
             techStack:["html","css","django"],
@@ -182,7 +193,7 @@ export default function Projects() {
             description:"A Full stack application to manage your daily tasks and is deployed on heroku. Primarily built to understand the concepts of Django"
         },
         {
-            id:17,
+            id:18,
             pic:calculator,
             name:"Calculator",
             techStack:["html","css","javascript"],
@@ -191,7 +202,7 @@ export default function Projects() {
             description:"A simple calculator made using HTML, CSS and Javascript similar to Apple calculator "
         },
         {
-            id:18,
+            id:19,
             pic:navigation,
             name:"Animated Navigation",
             techStack:["html","css","javascript"],

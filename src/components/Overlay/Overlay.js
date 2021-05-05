@@ -9,7 +9,7 @@ export default class Overlay extends Component {
     
      handleResize = (e) => {
       this.setState({ windowWidth: window.innerWidth });
-      if(window.innerWidth<=450 && this.state.count<2){
+      if(window.innerWidth<=500 && this.state.count<2){
           this.setState({show:true,count:this.state.count+1});
       } else {
           this.setState({show:false})

@@ -112,8 +112,36 @@
         border-bottom-right-radius: 5px;
     }
 }
+@media screen and (max-width:515px){
+    .project{
+        /* width:35%; */
+        margin:3%;
+        min-height:30vh;
+    }
+    .projectName>p{
+        font-size:2.5vw;
+    }
+    .projectName>div>svg{
+        font-size:2.5vw;
+        margin-top:5px;
+    }
+    .loadmore{
+        height:5vh;
+        /* width:15vw; */
+        font-size:2.5vw;
+        border-radius: 5px;
+        margin-top:-5px;
+    }
+    .ongoing{
+        font-size:2vw;
+    }
+}
 @media screen and (max-width:400px){
     .project{
         width:50%;
+        margin:5%;
+    }
+    .loadmore{
+        margin-top:-15px;
     }
 }

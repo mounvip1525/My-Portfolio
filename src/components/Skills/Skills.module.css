@@ -81,6 +81,7 @@
 .container2>div>img{
     height:10vh;
     width:10vw;
+    filter: invert(48%) sepia(29%) saturate(2480%) hue-rotate(209deg) brightness(101%) contrast(90%);
 }
 .container2>div{
     background:var(--white);
