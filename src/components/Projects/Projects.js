@@ -23,7 +23,7 @@ import picinpic from '../../assests/screenshare.png';
 import ecommerce from '../../assests/ecommerce.png';
 import gclone from '../../assests/fabforms.png';
 import navigation from '../../assests/navigation.png';
-import messlytix from '../../assests/messlytix.png';
+// import messlytix from '../../assests/messlytix.png';
 
 export default function Projects() {
     const [showClass,setShowClass]=useState(styles.displayNone);
