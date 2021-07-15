@@ -12,6 +12,8 @@ import python from '../../assests/python.svg';
 import java from '../../assests/java.svg';
 import mysql from '../../assests/database.svg';
 import git from '../../assests/github.svg';
+import figma from '../../assests/figma.svg';
+import typescript from '../../assests/typescript.svg';
 
 import Title from '../Title/Title';
 import Stars from '../Stars/Stars';
@@ -24,7 +26,7 @@ export default function Skills(props) {
               <CarouselProvider
                 naturalSlideWidth={100}
                 naturalSlideHeight={125}
-                totalSlides={8}
+                totalSlides={10}
                 isPlaying={true}
                 visibleSlides={4}
                 interval={3000}>
@@ -93,6 +95,22 @@ export default function Skills(props) {
                         <Stars count='4' />
                     </div>
                   </Slide>
+                  <Slide index={8}>
+                    <div className={styles.slideComponent}>
+                        <img src={figma} alt="Figma" />
+                        <h5>Figma</h5>
+                        <p>I'm a bit of a designer too</p>
+                        <Stars count='3' />
+                    </div>
+                  </Slide>
+                  <Slide index={9}>
+                    <div className={styles.slideComponent}>
+                        <img src={typescript} alt="Typescript" />
+                        <h5>Typescript</h5>
+                        <p>Well,my "type" is Unknown</p>
+                        <Stars count='4' />
+                    </div>
+                  </Slide>
                 </Slider>
                 <div className={styles.buttonContainer}>
                 <ButtonBack>&lt;</ButtonBack>
@@ -105,7 +123,7 @@ export default function Skills(props) {
                     <img src={html} alt="HTML" />
                     <h5>HTML</h5>
                     <p>My most typed characters: &lt; / &gt;</p>
-                    <Stars count='4'/>
+                    <Stars count='5'/>
                 </div>
                 <div>
                     <img src={javascript} alt="JavaScript" />

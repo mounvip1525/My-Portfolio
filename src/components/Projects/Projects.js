@@ -23,7 +23,12 @@ import picinpic from '../../assests/screenshare.png';
 import ecommerce from '../../assests/ecommerce.png';
 import gclone from '../../assests/fabforms.png';
 import navigation from '../../assests/navigation.png';
-// import messlytix from '../../assests/messlytix.png';
+import ghostchat from '../../assests/ghostchat.png';
+import dadjokes from '../../assests/dadjokes.png';
+import lightsout from '../../assests/lightsout.png';
+import hangman from '../../assests/hangman.png';
+import messlytix from '../../assests/messlytix.png';
+import palette from '../../assests/palette.png';
 
 export default function Projects() {
     const [showClass,setShowClass]=useState(styles.displayNone);
@@ -37,8 +42,53 @@ export default function Projects() {
     
     let hideModal = () => { setShowModal(false) }
     const projects1=[
+        {
+            id:1,
+            pic:ghostchat,
+            name:"Ghost Chat",
+            link:"https://ghost-chaat.netlify.app/",
+            sourceCode:"https://github.com/mounvip1525/ghost-chat",
+            techStack:["react","nodejs"],
+            description:"Anonymous group chat system made using Socket.io, React and NodeJS. It has features like change chat background,get list of users online and get the status of \"typing\" "
+        },
+        {
+            id:2,
+            pic:palette,
+            name:"Palette",
+            link:"https://react-palette-mounvi.netlify.app/",
+            sourceCode:"https://github.com/mounvip1525/Palette",
+            techStack:["react"],
+            description:"A flat UI color picker clone made using ReactJS. You can now pick your favorite colors, generate palettes and save them!"
+        },
+        {
+            id:3,
+            pic:lightsout,
+            name:"Lights Out",
+            link:"https://ligthtsout-mounvi.netlify.app/",
+            sourceCode:"https://github.com/mounvip1525/react-games",
+            techStack:["react"],
+            description:"Lights Out is a simple react game where a person wins if all the tiles are turned off. I'd challenge you to do this!"
+        },
+        {
+            id:4,
+            pic:dadjokes,
+            name:"Dad Jokes",
+            link:"https://jokesapp-mounvi.netlify.app/",
+            sourceCode:"https://github.com/mounvip1525/react-games",
+            techStack:["react"],
+            description:"Generate random jokes using the Joke API and you can upvote and downvote on your liking!"
+        },
+        {
+            id:6,
+            pic:sprintmaths,
+            name:"Sprint Maths",
+            techStack:["html","css","javascript"],
+            link:"https://mounvip1525.github.io/Sprint-Maths/",
+            sourceCode:"https://github.com/mounvip1525/Sprint-Maths",
+            description:"Want to test how fast are you at mental fast maths ? You can also compare your performance with the best scores and time taken."
+        },
             {
-                id:1,
+                id:7,
                 pic:photopedia,
                 name:"Infinity Gallery",
                 link:"https://mounvip1525.github.io/Infinity-gallery/",
@@ -47,7 +97,7 @@ export default function Projects() {
                 description:"Infinitely scroll through images taken from Unsplash, clicking on image will redirect you to the official source site!"
             },
             {
-                id:2,
+                id:8,
                 pic:countdown,
                 name:"Custom Countdown",
                 link:"https://mounvip1525.github.io/Custom-Countdown/",
@@ -56,7 +106,7 @@ export default function Projects() {
                 description:"Create your own Custom Countdown, locally stored hence you can come back later to check the same. What will you be counting to? :P"
             },
             {
-                id:3,
+                id:9,
                 pic:spockrock,
                 name:"RockPaperScissors+",
                 link:"https://mounvip1525.github.io/Spock-Rock-Game/",
@@ -65,7 +115,7 @@ export default function Projects() {
                 description:"Play Rock Paper Scissors Lizard Spock endlessly with the computer. Need a Big Bang Theory reference to understand the game? "
             },
             {
-                id:4,
+                id:10,
                 pic:ecommerce,
                 name:"E-commerce site",
                 link:"https://e-commerce-mounvi.herokuapp.com/",
@@ -74,7 +124,7 @@ export default function Projects() {
                 description:"Just an E-commerce site developed using react to practise the concepts of context API, pagination, states and many more. PS: Don't try the payment option"
             },
             {
-                id:5,
+                id:11,
                 pic:gclone,
                 name:"Google Forms clone~(ongoing)",
                 sourceCode:"https://github.com/mounvip1525/Google-Forms-Clone",
@@ -82,7 +132,7 @@ export default function Projects() {
                 description:"Google Forms clone with additional features like adding to folders, interactive UI, Hassle free form management",
             },
             {
-                id:6,
+                id:12,
                 pic:musicplayer,
                 name:"Music Player",
                 link:"https://mounvip1525.github.io/Music-Player/",
@@ -91,37 +141,36 @@ export default function Projects() {
                 description:"I'd love to make a Spotify clone one day till then this is a simple music player made using HTML,CSS and JS!"
             },
             {
-                id:7,
-                pic:quoteGnerator,
-                name:"Quote Generator",
+                id:16,
+                pic:bookmarks,
+                name:"My Bookmarker",
                 techStack:["html","css","javascript"],
-                link:"https://mounvip1525.github.io/Quote-Generator/",
-                sourceCode:"https://github.com/mounvip1525/Quote-Generator",
-                description:"Looking for a good random thought? This can be handy. If you like it share it on any of your favourite platform like twitter, whatsapp, facebook!"
+                link:"https://mounvip1525.github.io/Bookmarker-Links/",
+                sourceCode:"https://github.com/mounvip1525/Bookmarker-Links",
+                description:"Bookmark all your favourite sites in one place, clicking on any bookmark will redirect you to the desired site",
             },
-            {
-                id:8,
-                pic:sprintmaths,
-                name:"Sprint Maths",
-                techStack:["html","css","javascript"],
-                link:"https://mounvip1525.github.io/Sprint-Maths/",
-                sourceCode:"https://github.com/mounvip1525/Sprint-Maths",
-                description:"Want to test how fast are you at mental fast maths ? You can also compare your performance with the best scores and time taken."
-            },
-            {
-                id:9,
-                pic:pong,
-                name:"Pong Game",
-                techStack:["html","css","javascript"],
-                link:"https://mounvip1525.github.io/Pong/",
-                sourceCode:"https://github.com/mounvip1525/Pong",
-                description:"Traditional Pong game developed to understand the concepts of Canvas. Two player feature will be added soon!"
-            },
-            
     ];
     const projects2=[
         {
-            id:10,
+            id:13,
+            pic:quoteGnerator,
+            name:"Quote Generator",
+            techStack:["html","css","javascript"],
+            link:"https://mounvip1525.github.io/Quote-Generator/",
+            sourceCode:"https://github.com/mounvip1525/Quote-Generator",
+            description:"Looking for a good random thought? This can be handy. If you like it share it on any of your favourite platform like twitter, whatsapp, facebook!"
+        },
+        {
+            id:14,
+            pic:pong,
+            name:"Pong Game",
+            techStack:["html","css","javascript"],
+            link:"https://mounvip1525.github.io/Pong/",
+            sourceCode:"https://github.com/mounvip1525/Pong",
+            description:"Traditional Pong game developed to understand the concepts of Canvas. Two player feature will be added soon!"
+        },
+        {
+            id:15,
             pic:kanbanboard,
             name:"Kanban Board",
             techStack:["html","css","javascript"],
@@ -130,16 +179,16 @@ export default function Projects() {
             description:"A tool to visualise your work more efficienty and to maintain the order of daily work. Add/ Delete features and local storage enabled."
         },
         {
-            id:11,
-            pic:bookmarks,
-            name:"My Bookmarker",
-            techStack:["html","css","javascript"],
-            link:"https://mounvip1525.github.io/Bookmarker-Links/",
-            sourceCode:"https://github.com/mounvip1525/Bookmarker-Links",
-            description:"Bookmark all your favourite sites in one place, clicking on any bookmark will redirect you to the desired site",
+            id:5,
+            pic:messlytix,
+            name:"Messlytix",
+            link:"https://messlytix.herokuapp.com/",
+            sourceCode:"https://github.com/mounvip1525/Messlytix-DBMS",
+            techStack:["html","css","django"],
+            description:"Efficient Mess Management System made using Flask, I'd bet you want this system in your college too:)"
         },
         {
-            id:12,
+            id:17,
             pic:joketeller,
             name:"Joke Teller",
             techStack:["html","css","javascript"],
@@ -148,7 +197,7 @@ export default function Projects() {
             description:"Too tired to read ? Joke teller reads out programming related jokes to you! Have a funny day"
         },
         {
-            id:13,
+            id:18,
             pic:paint,
             name:"MS Paint clone",
             techStack:["html","css","javascript"],
@@ -157,7 +206,16 @@ export default function Projects() {
             description:"A classic MS Paint clone."
         },
         {
-            id:14,
+            id:20,
+            pic:hangman,
+            name:"Hangman",
+            techStack:["react"],
+            link:"https://hangman-mounvi.netlify.app/",
+            sourceCode:"https://github.com/mounvip1525/react-games",
+            description:"Your favourite hangman game made using React. I'm sure this will be your boredom companion:P"
+        },
+        {
+            id:19,
             pic:picinpic,
             name:"Play in background",
             techStack:["html","css","javascript"],
@@ -165,17 +223,8 @@ export default function Projects() {
             sourceCode:"https://github.com/mounvip1525/PictureInPicture",
             description:"View any required re-sizeable screen in your desired tab to enable picture in picture ability"
         },
-        // {
-        //     id:15,
-        //     pic:messlytix,
-        //     name:"Messlytix",
-        //     link:"https://messlytix.herokuapp.com/",
-        //     sourceCode:"https://github.com/mounvip1525/Messlytix-DBMS",
-        //     techStack:["html","css","django"],
-        //     description:"Efficient Mess Management System made using Flask, I'd bet you want this system in your college too:)"
-        // },
         {
-            id:16,
+            id:20,
             pic:videoplayer,
             name:"Video Player",
             techStack:["html","css","javascript"],
@@ -184,7 +233,7 @@ export default function Projects() {
             description:"Youtube clone on the way till then this is a simple custom video player!"
         },
         {
-            id:17,
+            id:21,
             pic:taskmate,
             name:"Taskmate-Django app",
             techStack:["html","css","django"],
@@ -193,7 +242,7 @@ export default function Projects() {
             description:"A Full stack application to manage your daily tasks and is deployed on heroku. Primarily built to understand the concepts of Django"
         },
         {
-            id:18,
+            id:22,
             pic:calculator,
             name:"Calculator",
             techStack:["html","css","javascript"],
@@ -202,7 +251,7 @@ export default function Projects() {
             description:"A simple calculator made using HTML, CSS and Javascript similar to Apple calculator "
         },
         {
-            id:19,
+            id:23,
             pic:navigation,
             name:"Animated Navigation",
             techStack:["html","css","javascript"],

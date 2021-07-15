@@ -94,14 +94,14 @@ export default function Feedback(props) {
                 </div>
                 <div className={styles.buttonContainer} onClick = {()=>showFeedback()}>
                     {show ? null :
-                    <FeedbackIcon/> }
+                    <FeedbackIcon style={{cursor:"pointer"}}/> }
                 </div>
                 <div className={styles.submitContainer} style={{display}}>
                   {serverState.status ?  
                       <div className={styles.thanks}>
                           <p className={!serverState.status.ok ? "errorMsg" : ""}>
                           {serverState.status.msg}
-                        </p> <FeedbackIcon onClick={()=>showFeedback()}/>
+                        </p> <FeedbackIcon style={{cursor:"pointer"}} onClick={()=>showFeedback()}/>
                       </div>
                         : <button className={styles.submit} type="submit" onClick={()=>showFeedback()} style={{display}}>Submit</button>
                   }

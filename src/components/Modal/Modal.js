@@ -15,7 +15,7 @@ const Modal = (props) => {
     <div className={modalClass}>
       <div className="modal-main">
           <div className="modalContainer">
-            <div className="modalClose"><CloseIcon onClick={()=>props.onHide()}/></div>
+            <div className="modalClose"><CloseIcon style={{cursor:"pointer"}}onClick={()=>props.onHide()}/></div>
             <div className="modalImage">
                 <img src={props.img} alt="pic" />
             </div>
